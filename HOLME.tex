@@ -1,0 +1,189 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+    
+\begin{document}
+    
+\title{HOLME \\{\large
+ An Application for Migrating Smart Home Configuration Using Matter
+ }
+}
+
+\author{\IEEEauthorblockN{Kang Museong}
+\IEEEauthorblockA{\textit{College of Engineering} \\
+\textit{Hanyang University}\\
+\textit{Dept.of Information Systems}\\
+Seoul, Korea \\
+bbibbi4808@hanyang.ac.kr}
+\and
+\IEEEauthorblockN{Kwon Hyuktae}
+\IEEEauthorblockA{\textit{College of Engineering} \\
+\textit{Hanyang University}\\
+\textit{Dept.of Information Systems}\\
+Seoul, Korea \\
+kwon0111@hanyang.ac.kr}
+\and
+\IEEEauthorblockN{Lim Kyumin}
+\IEEEauthorblockA{\textit{College of Engineering} \\
+\textit{Hanyang University}\\
+\textit{Dept.of Information Systems}\\
+Seoul, Korea \\
+mycheesepasta@gmail.com}
+\and
+\IEEEauthorblockN{Ha Seongwu}
+\IEEEauthorblockA{\textit{College of Engineering} \\
+\textit{Hanyang University}\\
+\textit{Dept.of Information Systems}\\
+Seoul, Korea \\
+rockey6865@hanyang.ac.kr}
+}
+
+\maketitle
+
+\begin{abstract}
+Our team is strivingly working on developing a MATTER-based smart home configuration maintenance application called `HOLME.' The aim of this application is to make it convenient to bring the existing smart home configuration to locations other than one's own home.
+Traditional smart home configuration have been constrained to specific applications under the umbrella of a single manufacturer. However, with the emergence of the MATTER protocol, it has become possible to integrate various IoT devices of different manufacturers seamlessly. Based on the MATTER protocol, we try to utilize the protocol to upload and download one's smart home settings to the server in any circumstances.
+Our core objectives revolve around the following two points: (1) Convenience: We aim to enable users to utilize our app to easily import their well-configured and time-consuming smart home settings  to different places via QR code at once.
+(2) Replaceability: When users go to a new place which do not have device(s) in their homes, we aim to align the environment to the pre-configured environment. We provide notifications and reports after the replacement process.
+Through a B2B business model, our application allows users to conveniently migrate their smart home environments using QR codes, not only from one home to another but also to places like hotels.
+Through this project, we aspire to expand the scope of traditional smart homes and develop a service that will play a pivotal role in the emerging sharing economy, particularly in shared housing scenarios in the near future.
+\end{abstract}
+
+\begin{IEEEkeywords}
+HOLME, MATTER, Convenience, Replaceability, B2B, Sharing Economy
+\end{IEEEkeywords}
+
+\begin{table}[h]
+\caption{Role Assignments}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{1.8cm}|p{1.4cm}|p{4.4cm}|}
+        \hline
+        Roles & Name & Task description and etc. \\ \hline
+         User, \par Customer, \par Development \par manager & Kang \par Museong &User/Customer consider what features should be added from the perspective of users or customers. Development manager oversees the overall aspects of the project, such as project scheduling and planning, product and service quality. Additionally, they accurately grasp user requirements and manage and supervise the entire software engineering process, including software design, development, and testing. \\ \hline
+
+	\end{tabular}
+\end{table}
+
+
+\begin{table}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{1.8cm}|p{1.4cm}|p{4.4cm}|}
+        \hline
+        AI \par Developer & Kwon \par Hyuktae  & AI developers create programs that adapt to the business's needs based on collected and analyzed data. In this service, they develop AI that makes recommendations based on users' past data. They design, develop, implement, and monitor AI systems and focus on data collection and data transformation architecture. \\ \hline
+        
+        Software \par Developer \par(Back-end) & Lim \par Kyumin & Backend developers consider the backend systems required for project development, utilizing databases and SQL queries. They manage the server-side and databases related to websites, web applications, or mobile solutions. As backend developers, they can work with various programming languages such as Python, Java, Node.js, and JavaScript. \\ \hline
+        
+       Software \par Developer\par(Front-end) & Ha \par Seongwu & Front-end developers design the UI/UX of applications to enhance the user experience, considering user convenience while implementing application designs. To accomplish this, proficiency in React-Native, TypeScript, and CSS is necessary.
+ \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\section{INTRODUCTION}
+
+\subsection{Motivation}
+The traditional smart home environment was reliant on devices from a specific manufacturer and tied to their proprietary applications. This posed a problem for users who had painstakingly set up their smart home environments as they couldn't easily replicate these settings in different locations when they traveled, moved, or added new devices.
+
+With the introduction of the new MATTER protocol, it has become possible to seamlessly connect various IoT devices. We intend to integrate a cloud server into our solution, enabling users to effortlessly access their established smart home environment from different locations.
+
+Our team aims to provide users with a feature through this application that, once they set up their smart home environment initially, they can easily maintain it while traveling, relocating, or on business trips. This application can be used by individual consumers and can also be applied to businesses like hotels. Furthermore, in the future, it is expected to play a crucial role in shared housing models within the sharing economy.
+
+\subsection{Problem Statement}
+\begin{itemize}
+\item [1] As the household adoption rate of IoT devices increases, there is a growing demand for services that manage IoT devices and smarthome environments. \\
+\item [2] With the post-COVID decline and subsequent increase in international travel and business trips, the demand for services that facilitate the seamless transfer of smart home device environments is on the rise.\\
+\item [3] There is currently no service or feature that allows for the seamless transfer of smart home environments from the originating smart devices to the target smart devices, irrespective of the manufacturer differences between them.
+\\
+\item [4] It can be cumbersome to set up a new environment when you move to a different location after configuring your smart home.
+\\
+\item [5] There is no application that automatically considers replacement options for missing devices when transferring a smart home environment.
+\\\item [6] Many existing voice notification services tend to deliver information in a rigid and verbose manner, often including unnecessary details.
+\end{itemize}
+
+
+\subsection{Research on Related Software}
+\begin{itemize}
+\item [1]ThinQ\\
+ThinQ is LG Electronics' brand for smart devices and appliances, providing users with a more convenient smart home experience through features like smart control, AI integration, voice commands, home automation, and smart routines. This technology and brand are utilized in various LG products. Additionally, users can invite others to their registered spaces using QR codes and have the capability to register MATTER-supported devices. \\
+\item [2]SmartThings\\
+ SmartThings is a smart home automation and control platform developed by Samsung Electronics, allowing users to centrally control and connect smart devices and appliances. This platform offers features such as convenient remote control via a smartphone app, automation and routine settings, compatibility with various devices, interconnectivity, and integration with third-party systems, providing users with an integrated smart home experience.\\
+\item [3]NUGU Smart Home\\
+ NUGU Smart Home is SK Telecom's smart home platform that allows users to control household appliances and IoT devices through voice commands. Additionally, this platform provides apartment management services, including apartment news updates, filing complaints, access to shared entrances, and parking information services, among others.
+\\
+\item [4]GIGA Genie Home IoT\\
+Giga Genie Smart Home is KT's smart home platform, enabling control of household appliances and IoT devices through voice commands. This platform collaborates with various companies to manage not only appliances like refrigerators but also devices such as boilers and cars.
+\\
+\item [5]Google Cloud IoT Core\\
+Developed by Google, this platform provides a fully managed service and allows easy and secure connection, management, and data ingestion from globally dispersed devices.
+\\
+\item [6]AWS IoT Device Management\\
+Provided by Amazon Web Services (AWS), this platform aims to facilitate the secure and efficient management of Internet of Things (IoT) devices. It offers tools and features to simplify the onboarding, organization, monitoring, and updating of IoT devices at scale.
+\\
+\item [7]Azure IoT Hub\\
+Azure IoT Hub is a versatile and scalable cloud platform (IoT PaaS) that caters to multiple tenants. It comprises an IoT device registry, data storage, and robust security features. It also offers a service interface to facilitate IoT application development.
+\\
+\item [8]Nabu Casa\\
+Nabu Casa is the company behind Home Assistant, a smart home automation platform that integrates and manages smart home devices and services. They offer cloud services for remote management and expansion of smart homes and provide a subscription-based service for storing IoT device settings and routines in the cloud, enabling remote management.
+\\
+\item [9]Hubitat\\
+A hub service that manages the smart home hub itself, allowing for seamless routine and rule setting between devices from different manufacturers.
+\\
+\end{itemize}
+
+
+
+\section{REQUIREMENT ANALYSIS}
+
+
+
+\subsection{Common Features}
+\begin{enumerate}
+\item[1] Sign-Up \\ 
+HOLME requires two types of information when signing up for membership. This is the email and password used to check DB registration. And there is a password verification field to reduce password-related errors. When the membership registration is completed, go to the login page. \\
+\item[2] Log in\\
+On the login page, a form screen appears where users can enter e-mails and passwords. HOLME authenticates whether you are a user registered in the DB with two elements: an e-mail and a password. At the bottom of the login button, there is a button to sign up for membership and go to the password change screen.
+\\
+\item[3] Place Management\\
+User should be able to create, update, and delete logical locations, as well as choose which one will be their main location.
+\\
+\item[4] Linking Management\\
+User selects a single location and can register or remove IoT devices at that location.
+
+\end{enumerate}
+
+\subsection{User-Specific}
+\begin{enumerate}
+\item[1] Import Settings \\ 
+User can import previously configured routines and settings from the ThinQ app. \\
+\item[2] Managing Routines\\
+User can apply 'My Smart Home Environment' to the connected machines by scanning the QR code generated by the hotel.
+\\
+\item[3] Considering Replaceability\\
+When a user loads their smart home environment, considering the likelihood that the configurations of all IoT devices may not be identical, interchangeability is taken into account.
+\\\\
+(1) When function replication is possible: automatic connection and function execution.\\\\
+(2) When function replication is not possible: submit a report.
+\\
+
+\item[4] Report\\
+After loading the smart home environment, the application prompts the user to submit a report. This report covers any issues encountered during the loading process as well as details of successful configurations.
+\\
+\end{enumerate}
+
+\subsection{Hotel-Specific}
+\begin{enumerate}
+\item[1] QR Code Generation\\ 
+Hotel generates QR codes and associates them with machines located at a single logical position.\\
+\item[2] QR Code expiration\\
+Hotel can expire the generated QR code after a specific period or at the desired time.\\
+\end{enumerate}
+\end{document}
