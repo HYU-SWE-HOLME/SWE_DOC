@@ -91,22 +91,38 @@ HOLME, MATTER, Convenience, Replaceability, B2B, Sharing Economy
 \section{INTRODUCTION}
 
 \subsection{Motivation}
-The traditional smart home environment was reliant on devices from a specific manufacturer and tied to their proprietary applications. This posed a problem for users who had painstakingly set up their smart home environments as they couldn't easily replicate these settings in different locations when they traveled, moved, or added new devices.
+In 2003, when the global population was 6.3 billion, there were 500 million IoT devices. However, it is anticipated that by 2025, there will be a distribution of 1 trillion IoT devices among a global population of 8.1 billion. As the proliferation of IoT devices has rapidly progressed, ICT companies have individually developed their IoT platforms. However, an issue arose as each company created their own applications.
 
-With the introduction of the new MATTER protocol, it has become possible to seamlessly connect various IoT devices. We intend to integrate a cloud server into our solution, enabling users to effortlessly access their established smart home environment from different locations.
+The existing smart home environment relied on devices from specific manufacturers and their proprietary applications. This resulted in users being tied to specific brands or apps when setting up their smart home environments. For example, a user with Samsung smart home devices who wanted to add LG smart home devices had to reset their existing Samsung smart home environment and download the LG smart home app, which was quite inconvenient for users.
 
-Our team aims to provide users with a feature through this application that, once they set up their smart home environment initially, they can easily maintain it while traveling, relocating, or on business trips. This application can be used by individual consumers and can also be applied to businesses like hotels. Furthermore, in the future, it is expected to play a crucial role in shared housing models within the sharing economy.
+MATTER was created with the aim of unifying these 'fragmented' IoT platforms, making it possible to control IoT devices from various manufacturers using a single protocol.
+
+With the introduction of the new MATTER protocol, it has become possible to effectively integrate various IoT devices. Therefore, we intend to develop an application that leverages cloud servers and generative AI to enable users to easily retrieve the smart home environment they configured at home from different locations.
+
+Our team's goal is to provide a feature that allows users to set up their initial smart home environment just once. This environment should remain easily maintainable when they travel, move, or go on business trips to different locations. This application is not only applicable to individual users but also to B2B scenarios, such as hotels and other accommodation providers. Furthermore, it is anticipated that it will play a pivotal role in shared economy models, like shared housing, in the future.
 
 \subsection{Problem Statement}
 \begin{itemize}
-\item [1] As the household adoption rate of IoT devices increases, there is a growing demand for services that manage IoT devices and smarthome environments. \\
-\item [2] With the post-COVID decline and subsequent increase in international travel and business trips, the demand for services that facilitate the seamless transfer of smart home device environments is on the rise.\\
-\item [3] There is currently no service or feature that allows for the seamless transfer of smart home environments from the originating smart devices to the target smart devices, irrespective of the manufacturer differences between them.
+\item [1] In the modern world, where the penetration rate of IoT (Internet of Things) devices is steadily increasing, the need for services that manage these devices and operate the environment efficiently is becoming more important. \\
+\item [2] As the percentage of international travel and business trips has increased since the end of COVID-19 and this has resulted in many people moving to other places, the need for services that can easily relocate and set up the environment of smart home devices is becoming more pronounced.\\
+\item [3] When moving environments from an existing smart home, compatibility issues arise due to differences between the manufacturer's starting smart device and the target smart device, which makes it difficult for users to move their current convenient smart home settings to a new location. In this situation, there is a need for services and capabilities to easily transfer and set the environment beyond the manufacturer's constraints between the starting and target smart devices.
 \\
-\item [4] It can be cumbersome to set up a new environment when you move to a different location after configuring your smart home.
+\item [4] When you move away from the existing place where your smart home is configured and move to another place, the new configuration feels cumbersome. This increases the need for solutions that make it easier to move around and to facilitate the smooth transfer of smart home devices.
 \\
-\item [5] There is no application that automatically considers replacement options for missing devices when transferring a smart home environment.
-\\\item [6] Many existing voice notification services tend to deliver information in a rigid and verbose manner, often including unnecessary details.
+\item [5] There are no applications to date that take into account the possibility of automatic replacement for devices that are not in a new location when you move your smart home environment to another location. This is where users experience inconvenience in relocating their environment, and there is a growing demand for new solutions and capabilities.
+\\\item [6] Traditional voice notification services often tend to provide information in a way that lists hard and unnecessary content, making it difficult for users to effectively accept information and understand the situation. These limitations increase the need for improved user experience and more effective voice notification services.
+\end{itemize}
+
+\subsection{Target Customer}
+\begin{itemize}
+\item [1] Smart Home Owners\\
+The main target audience for this project is individual smart home owners. They are people who want to effectively manage their smart home environment and migrate to other places, including smart home owners who are interested in moving their residences or bringing them up from other places.\\
+\item [2] Hotels and properties\\
+HOLME can also be delivered to hotels and properties through the B2B business model. This may include tourists and business travelers who want to experience a home-like smart environment at a hotel or property.\\
+\item [3] IoT device maker\\
+HOLME opens up the possibility of working with IoT device maker's products by providing solutions that integrate and maintain compatibility with various IoT devices. Also, companies looking for new business opportunities are potential target customers for HOLME.\\
+\item [4] Sharing Economy Participants\\
+Sharing economy participants will be very interested in solutions that can easily share smart home environments and move to other places. These solutions will provide shared and rental home owners and users with the opportunity to move freely and enjoy similar smart environments in new places while sharing the convenience of smart\\
 \end{itemize}
 
 
@@ -135,7 +151,34 @@ Azure IoT Hub is a versatile and scalable cloud platform (IoT PaaS) that caters 
 Nabu Casa is the company behind Home Assistant, a smart home automation platform that integrates and manages smart home devices and services. They offer cloud services for remote management and expansion of smart homes and provide a subscription-based service for storing IoT device settings and routines in the cloud, enabling remote management.
 \\
 \item [9]Hubitat\\
-A hub service that manages the smart home hub itself, allowing for seamless routine and rule setting between devices from different manufacturers.
+Hubitat is a home automation hub that supports Z-Wave and Zigbee protocols, providing local control and processing, customisability, multiple smart home device compatibility, and cost-effective features. In addition, Hubitat is a hub service that manages the smart home hub itself, allowing seamless routine and rule-setting between devices from different manufacturers. 
+\\
+\end{itemize}
+
+
+\subsection{Expectation Effectiveness}
+\begin{itemize}
+\item [1] Expanding the range of smart homes\\
+In addition to breaking away from traditional smart home environments (single manufacturer, tied to specific applications), HOLME extends the reach of smart home technology by expanding existing smart home environments to other places, not just at home. This allows users to easily bring up and manage their smart home environment outside of home.
+\\
+\item [2] Technological innovation and Competitive advantage\\
+Based on the MATTER protocol, HOLME integrates various IoT devices into smart home applications and combines generative AI with the cloud. This provides an opportunity to lead technological innovation and gain a competitive edge in the existing smart home market.
+\\
+\item [3] Forward-looking\\
+HOLME will be able to lead smart home technology to the wider market through cooperation with various accommodations such as hotels. In addition, it will play a key role in the shared housing platform in the upcoming trend of the shared economy.
+\\
+\end{itemize}
+
+\subsection{Profit Structure}
+\begin{itemize}
+\item [1] Certification and Hotel Partnership\\
+HOLME can partner with the hotel to provide certification for the hotel's smart home environment. This certification is responsible for ensuring the quality and stability of the hotel's smart home service to the customer. The hotel may pay a fee to obtain and maintain this certification.
+\\
+\item [2] Marketing and Public relations agreements\\
+Once the hotel is certified by HOLME, it can be used for marketing and promotion purposes.HOLME promotes the hotel in its own application, and the hotel can promote HOLME to mutual benefit.
+\\
+\item [3] Custom Solutions and Consulting\\
+Providing customized smart home solutions for properties such as hotels, and providing consulting and integrated services for this purpose can generate revenue.
 \\
 \end{itemize}
 
@@ -143,40 +186,125 @@ A hub service that manages the smart home hub itself, allowing for seamless rout
 
 \section{REQUIREMENT ANALYSIS}
 
-
-
 \subsection{Common Features}
 \begin{enumerate}
-\item[1] Sign-Up \\ 
-HOLME requires two types of information when signing up for membership. This is the email and password used to check DB registration. And there is a password verification field to reduce password-related errors. When the membership registration is completed, go to the login page. \\
-\item[2] Log in\\
-On the login page, a form screen appears where users can enter e-mails and passwords. HOLME authenticates whether you are a user registered in the DB with two elements: an e-mail and a password. At the bottom of the login button, there is a button to sign up for membership and go to the password change screen.
-\\
-\item[3] Place Management\\
-User should be able to create, update, and delete logical locations, as well as choose which one will be their main location.
-\\
-\item[4] Linking Management\\
-User selects a single location and can register or remove IoT devices at that location.
 
+
+\item[1] Tutorial \\ 
+The tutorial should be the first screens where HOLME is downloaded and shown. Users should be able to select the following options. 
+\begin{itemize}
+\item [1)] Skip the tutorial and sign up directly
+\item [2)] View next page. If a user has reached the last page of the tutorial, the next step should be sign-up\\
+\end{itemize}
+
+
+\item[2] Sign-Up \\ 
+HOLME needs four types of information to sign up for membership. These are phone numbers, passwords, name, and birth dates.
+\begin{itemize}
+\item [1)] Enter phone numbers\\
+The phone number must be entered, and the phone number is verified through the carrier's authentication system to confirm whether the phone number is valid for membership registration. The phone number serves as an ID in the subsequent login process.
+\item [2)] Enter passwords \\
+Passwords must be entered and must be at least 8 characters long in combination of 3 or more of English uppercase/English lowercase/number/special characters. When the user enters the desired password, it is displayed in the form of ‘****’ on the screen, expressing information about it as [Unavailable/Safe/Dangerous].
+\item [3)] Enter a name  \\
+The name must be entered, and subsequently set to the default nickname at first login. The name is also used in ID search.
+\item [4)] Enter birth dates \\
+The birth dates must be entered, and a pop-up window is displayed every year to celebrate the birthday of the user. The date of birth is also used in ID search.\\
+\end{itemize}
+
+
+\item[3] Log in\\
+There are two types of logins: 1) Local logins through HOLME membership, 2) SNS logins through SNS linkage.
+\begin{itemize}
+\item [1)] Local logins through HOLME membership
+\begin{itemize}
+\item [(1)] Local logins through HOLME membership
+The system checks whether the ID and password entered by the user have filled the digits. If the number of digits is not filled, a warning message is shown in red.
+\item [(2)] When the ID and password input by the user exist in the member database, the user succeeds in logging in. After that, it moves to the main page.
+\item [(3)] If the phone number and password entered by the user do not exist in the member database, the user fails to log in and displays ``Non-existent member'' in the pop-up window.
+\end{itemize}
+\item [2)] SNS logins through SNS linkage 
+\begin{itemize}
+\item [(1)] Utilizes the Google, Apple, Facebook, Amazon, Naver, Kakao sign-up APIs.
+\item [(2)] If the SNS login link is successful, the system must receive the user's name and date of birth. Then, go to the main page.\\
+\end{itemize}
+\end{itemize}
+
+
+\item[4] Find ID\\
+It is a function that exists for people who have lost their ID. HOLME's ID is based on the phone number, but you can add an email. Therefore, when you forget your phone number, you find your phone number using e-mail, and when you forget your e-mail, you find an e-mail based on the phone number. In case you don't remember both, you can find your ID by the name and date of birth registered at the time of membership registration.
+\begin{itemize}
+\item [1)]  The system receives an e-mail or telephone number. If the corresponding information exists in the user DB, a phone number or email is notified based on the corresponding information.
+\item [2)] If the user does not know either e-mail or phone number, the system receives the name and date of birth and teaches the ID if the information exists in the user DB\\
+\end{itemize}
+
+
+\item[5] Resetting password
+\begin{itemize}
+\item [1)]  The system receives an ID to reset the password.
+\item [2)] If the input ID does not exist in the user DB, a warning message will be displayed saying, ``Please enter your email or phone number correctly.''
+\item [3)] When the input ID exists in the user DB, the system receives the user's name, date of birth, and phone number, and goes through the process of verifying whether the user is correct through authentication by the carrier.
+\item [4)] When the user succeeds in identifying himself/herself, the system receives a password so that the user can reset the password. At this time, the password must have a length of at least 8 characters in a combination of at least three of the English uppercase/English lowercase/number/special characters. When the user enters the desired password, it is displayed in the form of ‘****’ on the screen, expressing information about it as [unavailable/safe/dangerous].\\
+\end{itemize}
+
+\item[6] Language change\\
+This is a function that should be presented in the upper right corner of the login window, and the initial default value is Korean. You should be able to change this into another language.
 \end{enumerate}
+
+
 
 \subsection{User-Specific}
 \begin{enumerate}
-\item[1] Import Settings \\ 
-User can import previously configured routines and settings from the ThinQ app. \\
-\item[2] Managing Routines\\
-User can apply 'My Smart Home Environment' to the connected machines by scanning the QR code generated by the hotel.
+
+\item[1] Main page \\ 
+The main page is responsible for `my space'. The main page consists of space management, space setting, device addition, device operation, and routine execution.
+\begin{itemize}
+\item [1)] Place management\\
+The user should be able to add plave, name, modify, and delete each place. In addition, the color should be set for each place so that the top color of the main page can be changed together.
+\item [2)] Place settings\\
+Among the places added by the user, the desired place is set as the `current place' and set as the main page. In addition, it should be possible to show a list of places created by users, and to change the `current place' into another place.
+\item [3)] Device connection\\
+Users should be able to call up all devices at once through QR code recognition.
+\item [4)] Device manipulation\\
+Users should be able to manipulate IoT devices located on the main page.
+\item [5)] Run Routine\\
+The user should be able to execute routines located on the main page.\\
+\end{itemize}
+
+\item[2] Mebu bar\\
+The menu bar is responsible for `my settings'. The menu bar consists of the following five types.
+\begin{itemize}
+\item [1)] Device Settings\\
+Detailed settings can be stored in advance for each type of IoT device. Here, the devices are virtual devices, and detailed settings may be set even for devices that do not have them in reality. After connecting to the space, the actual devices are covered with pre-set settings and the device setting is performed with a connection.
+\item [2)] Routine Settings
+
+\begin{itemize}
+\item [(1)]  Search Routine \\
+The user should be able to search for pre-set routines.
+\item [(2)] Add Routine\\
+Users should be able to generate the desired routine by adding routines. Here, the routine means the operation of several actions. The user should be able to set the routine name and then, when this routine starts, set which actions should be executed. And when adding each action, it should be possible to add the desired action of the desired device through 'device and action search'.
+\item [(2)] Edit Routine\\
+The user should be able to edit the routine. This refers to changing the name of the routine, adding actions, deleting actions, and changing the order of actions.
+\end{itemize}
+
+\item [3)] Home\\
+The user should be able to go to the main screen of the space where he is currently located by pressing the home button.
+\item [4)] Report\\
+Reports are generated when the user connects preset device settings and routine settings to a location. This is a specific report of what settings have been applied to automatically connected devices, which are replaceable and which are irreplaceable. It also generates a report when the routine is executed. This should inform the user that a device has performed a certain action in the course of executing the routine execution of the routine.
+\item [5)] My HOLME\\
+My HOLME plays the role of `set-up' in other applications
+These include profile changes, nickname changes, notification settings, network connections, IoT service connections, language changes, one-to-one inquiries, email ID changes, and password changes.\\
+\end{itemize}
+
+\item[3] Import settings\\
+In conjunction with other IoT management applications, HOLME should be able to load a list or routine of devices previously used by other applications to HOLME.
 \\
-\item[3] Considering Replaceability\\
-When a user loads their smart home environment, considering the likelihood that the configurations of all IoT devices may not be identical, interchangeability is taken into account.
-\\\\
-(1) When function replication is possible: automatic connection and function execution.\\\\
+
+\item[4] Considering Replaceability\\
+When a user loads their smart home environment, considering the likelihood that the configurations of all IoT devices may not be identical, interchangeability is taken into account.\\
+(1) When function replication is possible: automatic connection and function execution.\\
 (2) When function replication is not possible: submit a report.
 \\
 
-\item[4] Report\\
-After loading the smart home environment, the application prompts the user to submit a report. This report covers any issues encountered during the loading process as well as details of successful configurations.
-\\
 \end{enumerate}
 
 \subsection{Hotel-Specific}
