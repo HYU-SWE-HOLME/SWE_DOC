@@ -169,6 +169,39 @@ HOLME will be able to lead smart home technology to the wider market through coo
 \\
 \end{itemize}
 
+\subsection{Key Definitions}
+\begin{itemize}
+\item [1] Virtual space\\
+1) Basic Assumption: Save the configuration settings and routines I'm currently using to `virtual space.’\\\\
+2) If IoT devices set at home are set in a `virtual space’ called ``My House'', the setting of a `virtual space’ called ``My House'' can be imported into another space.
+\\
+\item [2] Logical hub\\
+Backbone SW that gives arbitrary IoT devices the ability to act as a matter hub.
+\\
+\item [3] synchronization\\
+It refers to the process of calling the settings of `virtual space' by scanning a QR code.
+\\
+\item [4] allocation\\
+The function of connecting the IoT devices present in each room to their respective rooms within the hotel.
+\\
+\end{itemize}
+
+\subsection{Scenario}
+\begin{itemize}
+\item [1)] A hotel entered into an agreement with HOLME and `allocated’ the existing IoT devices to their respective rooms.
+\\
+\item [2)] User (Customer) uses the HOLME app at home and villa to store and use smart home environments and routines in the form of each `virtual space.’
+\\
+\item [3)] The user has a business trip coming up, so he browsed a hotel reservation app and made a reservation at a hotel with the HOLME mark.
+\\
+\item [4)] When the user arrived at the hotel room, he scanned the QR code in the room, thereby `synchronization' that room with the user's `virtual space.’ During the 'sync' process, the user can choose which `virtual space' to `synchronization' with.
+\\
+\item [5)]Then, a new `virtual space’ that can manage the hotel room was copied into the HOLME app, and the existing settings were applied.
+\\
+\end{itemize}
+
+
+
 \subsection{Profit Structure}
 \begin{itemize}
 \item [1] Certification and Hotel Partnership\\
@@ -256,12 +289,12 @@ This is a function that should be presented in the upper right corner of the log
 \begin{enumerate}
 
 \item[1] Main page \\ 
-The main page is responsible for `my space'. The main page consists of space management, space setting, device addition, device operation, and routine execution.
+The main page is responsible for `Virtual space'. The main page consists of Virtual space management, Virtual space setting, device addition, device operation, and routine execution.
 \begin{itemize}
-\item [1)] Place management\\
-The user should be able to add plave, name, modify, and delete each place. In addition, the color should be set for each place so that the top color of the main page can be changed together.
-\item [2)] Place settings\\
-Among the places added by the user, the desired place is set as the `current place' and set as the main page. In addition, it should be possible to show a list of places created by users, and to change the `current place' into another place.
+\item [1)] Virtual space management\\
+The user should be able to add Virtual space, name, modify, and delete each Virtual space. In addition, the color should be set for each place so that the top color of the main page can be changed together.
+\item [2)] Virtual space settings\\
+Among the virtual spaces added by the user, the desired Virtual space is set as the `current place' and set as the main page. In addition, it should be possible to show a list of Virtual spaces created by users, and to change the `current place' into another Virtual space.
 \item [3)] Device connection\\
 Users should be able to call up all devices at once through QR code recognition.
 \item [4)] Device manipulation\\
@@ -270,7 +303,7 @@ Users should be able to manipulate IoT devices located on the main page.
 The user should be able to execute routines located on the main page.\\
 \end{itemize}
 
-\item[2] Mebu bar\\
+\item[2] Menu bar\\
 The menu bar is responsible for `my settings'. The menu bar consists of the following five types.
 \begin{itemize}
 \item [1)] Device Settings\\
@@ -292,7 +325,7 @@ The user should be able to go to the main screen of the space where he is curren
 Reports are generated when the user connects preset device settings and routine settings to a location. This is a specific report of what settings have been applied to automatically connected devices, which are replaceable and which are irreplaceable. It also generates a report when the routine is executed. This should inform the user that a device has performed a certain action in the course of executing the routine execution of the routine.
 \item [5)] My HOLME\\
 My HOLME plays the role of `set-up' in other applications
-These include profile changes, nickname changes, notification settings, network connections, IoT service connections, language changes, one-to-one inquiries, email ID changes, and password changes.\\
+These include profile changes, nickname changes, notification settings, network connections, IoT service connections, application for accommodation manager, language changes, one-to-one inquiries, email ID changes, and password changes.\\
 \end{itemize}
 
 \item[3] Import settings\\
@@ -309,9 +342,19 @@ When a user loads their smart home environment, considering the likelihood that 
 
 \subsection{Hotel-Specific}
 \begin{enumerate}
-\item[1] QR Code Generation\\ 
-Hotel generates QR codes and associates them with machines located at a single logical position.\\
-\item[2] QR Code expiration\\
-Hotel can expire the generated QR code after a specific period or at the desired time.\\
+\item[1] Log in for Hotel Administrator\\ 
+Hotel administrator register as members with ordinary members, but if they apply for hotel administrator authority through ``application for accommodation manager'', and certify it at HOLME, a new hotel management menu will be opened.\\
+\item[2] Menu bar for Hotel Administrator\\
+The menu bar for hotel managers consists of the following. Room management, device management by room, QR code management, inquiry
+\begin{itemize}
+\item [1)] Room management\\
+The user should be able to add plave, name, modify, and delete each place. In addition, the color should be set for each place so that the top color of the main page can be changed together.
+\item [2)] Device management by room\\
+Hotel managers should be able to add, modify, and delete IoT devices that will be placed in rooms created through `room management'. This can be applied collectively to multiple rooms.
+\item [3)] QR code management\\
+For rooms where device management for each room has been completed, a QR code that can bring all devices connected to the room to HOLME at once should be generated. In addition, the administrator must be able to expire the QR code if desired.
+\item [4)] Inquiry\\
+Hotels should be able to proceed remotely by contacting HOLME for all processes, including room management, room-specific device management, and QR code management. It also serves as a consultation channel for hotel managers and HOLME
+\end{itemize}
 \end{enumerate}
 \end{document}
