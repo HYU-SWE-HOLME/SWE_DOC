@@ -562,9 +562,1289 @@ Furthermore, Notion excels in supporting team collaboration. Multiple users can 
 \caption{Zoom} 
 \end{figure}\\
 Zoom is an online video conferencing and collaboration software that is used for remote communication and collaboration. This platform offers various features such as video meetings, webinars, screen sharing, group chat, and file sharing, enabling users to work and communicate efficiently. It is widely used, especially to support remote work and education across regions and internationally.\\
-
 \end{enumerate}
 
+
+
+
+
+\section{REQUIREMENT SPECIFICATION}
+\subsection{Functional Requirements}
+\begin{enumerate}
+\item[1] Entry
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.38\columnwidth]{img/Specific/001.png}
+\caption{ID:001, HOLME-Entry-splashing}
+\end{figure}
+
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         001 \par  & HOLME-\par Entry-splashing & When the application is launched, the startup page should be displayed for a duration of 1 to 2 seconds to prevent an empty page from being shown while the application is loading its data. This ensures a smooth and visually appealing user experience during the app's startup process.\\ \hline
+    \end{tabular}
+\end{table}
+
+\item[2] Tutorial\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/002.png}
+\caption{ID:002, HOLME-Tutorial}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         002 \par  & HOLME-\par Tutorial &Upon the initial download of the application, a tutorial screen must be displayed to the user. The tutorial screen should contain information explaining the key features and usage of the application.\\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{img/Specific/003.png}
+\caption{ID:003, HOLME-Tutorial-Skip}
+\vspace{0.5cm}
+\includegraphics[width=0.35\columnwidth]{img/Specific/004.png}
+\caption{ID:004, HOLME-Tutorial-Navigate}
+\end{figure}
+
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         003 \par  & HOLME-\par Tutorial-\par Skip &Users should have the option to skip the tutorial. If the user chooses to skip the tutorial, they must be able to proceed directly to the registration process.\\ \hline
+         004 \par  & HOLME-\par Tutorial-\par Navigate &Within the tutorial screen, users should be provided with an option to navigate to the next page of the tutorial. When users reach the last page of the tutorial, they should be presented with the option to proceed to the registration steps.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+
+\item[3] Sign-Up and Log-In
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\columnwidth]{img/Specific/005.png}
+\caption{ID:005, HOLME-Login-Page}
+\end{figure}
+
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         005 \par  & HOLME-\par Login-\par Page &Users should be able to use the following features in the login page: Sign Up, Log In, Find ID, Reset Password, SNS Login, and Language Change.\\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\columnwidth]{img/Specific/006.png}
+\caption{ID:006, HOLME-SignUp-Terms and Conditions Agreement}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         006 \par  & HOLME-\par SignUp-\par Terms and \par Conditions Agreement &Users must agree to HOLME's terms and conditions to sign up.\\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/007.png}
+\caption{ID:007, HOLME-SignUp-PhoneNumber}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         007 \par  & HOLME-\par SignUp-\par Phone \par Number &Users are required to enter their phone number. The phone number will serve as the user's ID during the login process after registration. The validity of the phone number should be verified through the authentication system of the mobile service provider.\\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/008.png}
+\caption{ID:008, HOLME-SignUp-Password}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         008 \par  & HOLME-\par SignUp- \par Password &Users must enter a password. The password should be at least 8 characters long and must contain a combination of at least 3 of the following: uppercase letters, lowercase letters, numbers, and special characters. When the user enters their desired password, it should be displayed on the screen as '****', and its security level should be indicated as "[Unavailable/Safe/Dangerous]" depending on the password's strength."\\ \hline
+	\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/009.png}
+\caption{ID:009, HOLME-SignUp-Name and Birthdate}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         009 \par  & HOLME-\par SignUp-\par Name and \par Birthdate &Users must enter their name and date of birth. This information will be used for 'ID retrieval' purposes.\\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{img/Specific/010.png}
+\caption{ID:010, HOLME-SignUp-PreventingDuplicate-Phonenumber}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         010 \par  & HOLME-\par SignUp-\par Preventing \par Duplacte \par Phonenumber &Registration with duplicate phone numbers must be prevented. Attempting to register with a phone number that is already in use should not be allowed.\\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\columnwidth]{img/Specific/011.png}
+\caption{ID:011, HOLME-SignUp-RegistrationCompleted}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         011 \par  & HOLME-\par SignUp-\par Registration \par Completed &Upon successful registration, a notification should be displayed to the user, and they should be automatically redirected to the login process.\\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{img/Specific/012.png}
+\caption{ID:012, HOLME-Login-Types}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         012 \par  & HOLME-\par Login-\par Types &Users should be able to log in using two types of login methods:
+(1) Local login via HOLME membership, (2) SNS login via social media integration.\\ \hline
+	\end{tabular}
+\end{table}
+
+\clearpage
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.82\columnwidth]{img/Specific/014.png}
+\caption{ID:014, HOLME-Login-Local Failed(1)}
+
+\includegraphics[width=0.82\columnwidth]{img/Specific/015.png}
+\caption{ID:015, HOLME-Login-Local Failed(2)}
+
+\begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+    \hline
+    ID & Name & Description\\ \hline
+     013 \par  & HOLME-\par Login-\par Local Success &If the ID and password entered by the user exist in the member database, the user will successfully log in and be directed to the main page.\\ \hline
+014 \par  & HOLME-\par Login-\par Local Failed(1) &If the user enters their ID and password, but either the ID or the password is incorrect, a popup window will request the user to check their ID and password again.\\ \hline
+015 \par  & HOLME-\par Login-\par Local Failed(2) &If the phone number and password entered by the user do not exist in the member database, the user will fail to log in, and a popup window will display the message 'Non-existent Member'.\\ \hline
+\end{tabular}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{img/Specific/016.png}
+\caption{ID:016, HOLME-Login-Types}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         016 \par  & HOLME-\par Login-\par SNS login &The system utilizes SNS registration APIs such as Google, Apple, Facebook, Amazon, Naver, Kakao, and more.\\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/017.png}
+\caption{ID:017, HOLME-Login-FindID}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         017 \par  & HOLME-\par Login-\par FindID &If a user forgets their username (phone number or email), they should be able to navigate to the "Find ID" page via the "Find ID" button.\\ \hline
+    \end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{img/Specific/018.png}
+\caption{ID:018, HOLME-Login-FindID-Phonenumber}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         018 \par  & HOLME-\par Login-\par FindID- \par Phonenumber &Users should be able to find their userID by entering their registered phone number.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{img/Specific/019.png}
+\caption{ID:019, HOLME-Login-FindID-name/birthdate}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         019 \par  & HOLME-\par Login-\par FindID- \par name/birthdate &If a user has forgotten their phone number as well, they should be able to find their username using other member information such as name, date of birth, and gender.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/020.png}
+\caption{ID:020, HOLME-Login-Password Reset}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         020 \par  & HOLME-\par Login-\par Password Reset &If a user has forgotten their password, they should be able to access the "Password Reset" page via the "Password Reset" button.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/021.png}
+\caption{ID:021, HOLME-Login-Password Reset Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         021 \par  & HOLME-\par Login-\par Password Reset Page &Users should enter their registered phone number. The entered phone number should be verified to match the information in the user database.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\columnwidth]{img/Specific/022.png}
+\caption{ID:022, HOLME-Login-Password Reset Authentication}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         022 \par  & HOLME-\par Login-\par Password \par Reset \par Authentication &The system should provide users with instructions for setting a new password through carrier-based-verification.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\columnwidth]{img/Specific/023.png}
+\caption{ID:023, HOLME-Login-New Password}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         023 \par  & HOLME-\par Login-\par New Password&When setting a new password, users should be provided with appropriate security requirements, such as a combination of at least 8 characters, including uppercase letters, lowercase letters, numbers, and special characters.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\columnwidth]{img/Specific/024.png}
+\caption{ID:024, HOLME-Login-Language Setting}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         024 \par  & HOLME-\par Login-\par Language Setting &The language setting feature should be located in the top right corner of the login window. The initial default language should be set to Korean. Users should be able to change to a different language by clicking on this button.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\columnwidth]{img/Specific/025.png}
+\caption{ID:025, HOLME-Login-Language select}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         025 \par  & HOLME-\par Login-\par Language \par Select &Users should be able to select their preferred language from the available options. After changing the language, the interface and text should be switched to the selected language. The user's language preference should be retained even if they exit and restart the application.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\item[4] Mainpage\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\columnwidth]{img/Specific/026.png}
+\caption{ID:026, HOLME-Mainpage}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         026 \par  & HOLME-\par Mainpage &The main page is responsible for managing 'Virtual space' and controlling various smart home functions. The main page should include the following key functions: 'Virtual space management settings,' 'Remote device control,' 'Routine execution,' and 'Device addition.'\\ \hline
+         027 \par  & HOLME-\par Mainpage-display &When the user selects the current space, the IoT devices and routines associated with that virtual space will be displayed.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\columnwidth]{img/Specific/028.png}
+\caption{ID:028, HOLME-Mainpage-Simple Control}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         028 \par  & HOLME-\par Mainpage-\par Simple \par Control &
+         On the main page set as the current space, users should be able to easily control connected IoT devices remotely.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\columnwidth]{img/Specific/029.png}
+\caption{ID:029, HOLME-Mainpage-Detailed Control}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         029 \par  & HOLME-\par Mainpage-\par Detailed \par Control &
+         Clicking on it should take you to the detailed control page where you can operate all the functions of that device.\\ \hline
+    \end{tabular}
+\end{table}
+
+\clearpage
+\item[4-1] Instances\\
+\begin{itemize}
+\item [(1)] AirConditioner
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         030 \par  & HOLME-\par Instances-\par AirConditioner-Check \par Temperature & User must be able to check the temperature.\\ \hline
+         031 \par  & HOLME-\par Instances-\par AirConditioner-Check \par Humidity & User must be able to check the humidity.\\ \hline
+         032 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Temperature & User must be able to adjust the temperature.\\ \hline
+         033 \par  & HOLME-\par Instances-\par AirConditioner-Contorl \par Power & User must be able to control the power.\\ \hline
+         034 \par  & HOLME-\par Instances-\par AirConditioner-Select \par Opertating mode & User must be  able to select the operating mode.\\ \hline
+         035 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par direction of \par the airflow & User must be able to adjust the direction of the airflow (up and down).\\ \hline
+         036 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Fan Speed & User must be able to adjust the fan speed.\\ \hline
+         037 \par  & HOLME-\par Instances-\par AirConditioner-Run \par SmartCare & User must be able to run Smart Care (self-diagnosis).\\ \hline
+         038 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Screen \par brightness & User must be able to adjust the screen brightness.\\ \hline
+         039 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Power saving \par modes & User must be able to activate and deactivate the power-saving mode.\\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         040 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Drying mode & User must be able to activate the automatic drying mode.\\ \hline
+         041 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Tropical nigth \par sleep mode & User must be able to activate the tropical night sleep mode.\\ \hline
+         042 \par  & HOLME-\par Instances-\par AirConditioner-Set \par On-time \par reservation \par by the hour & User must be able to set on-time reservations by the hour.\\ \hline
+         043 \par  & HOLME-\par Instances-\par AirConditioner-Set \par Off-time \par reservation \par by the hour & User must be able to  set off-time reservations by the hour.\\ \hline
+         044 \par  & HOLME-\par Instances-\par AirConditioner-Cancel \par specified reservations & User must be able to cancel specified reservations.\\ \hline
+    \end{tabular}
+\end{table}
+\item [(2)] LightBulb\cite{LightBulb}\\
+\item [(3)] Refrigerator\cite{Refrigerator}\\
+\item [(5)] WaterDispensor\cite{WaterDispensor}\\
+\item [(6)] Television\cite{Television}\\
+\item [(7)] Soundbar\cite{Soundbar}\\
+\item [(8)] MassageChair\cite{MassageChair}\\
+\item [(9)] Blind\cite{Blind}\\
+\end{itemize}
+\clearpage
+
+\item[4] Mainpage(.cont)\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/045.png}
+\caption{ID:045, HOLME-Mainpage-Device addition Button}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         045 \par  & HOLME-\par Mainpage-\par Device \par addition \par Button &Users should be able to touch the "Add Device" button on the main page to transition to the QR code recognition screen.\\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\columnwidth]{img/Specific/046.png}
+\caption{ID:046, HOLME-Mainpage-QRcode}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         046 \par  & HOLME-\par Mainpage-\par QRcode \par recognition &Users should be able to easily add devices through QR code recognition. QR code recognition should operate swiftly and prioritize user convenience.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/047.png}
+\caption{ID:047, HOLME-Mainpage-RoutineExcution}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         047 \par  & HOLME-\par Mainpage-\par Routine \par Excution &Users should be able to execute pre-set routines in the current space on the main page.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/048.png}
+\caption{ID:048, HOLME-Mainpage-CurrentSpace}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         048 \par  & HOLME-\par Mainpage-\par CurrentSpace &Add a label at the top of the main page to indicate "Current Space," clearly displaying the currently selected virtual space to the user.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\columnwidth]{img/Specific/049.png}
+\caption{ID:049, HOLME-Mainpage-Space List Button}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         049 \par  & HOLME-\par Mainpage-\par Space List \par Button &Users should be able to check the list of virtual spaces by clicking a button.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\columnwidth]{img/Specific/050.png}
+\caption{ID:050, HOLME-Mainpage-Virtual Space List}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         050 \par  & HOLME-\par Mainpage-\par Virtual \par Space List&Users should be able to check the list of virtual spaces and, at any time, set a different virtual space as the current space.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.47\columnwidth]{img/Specific/051.png}
+\caption{ID:051, HOLME-Mainpage-Space Change}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         051 \par  & HOLME-\par Mainpage-\par Space \par Change&Users should be able to set a different virtual space as the current space at any time.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/052.png}
+\caption{ID:052, HOLME-Mainpage-Space Edit Button}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         052 \par  & HOLME-\par Mainpage-\par Space \par Edit \par Button &Users should be able to add, edit, and delete spaces by pressing the edit button in the space list.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\columnwidth]{img/Specific/053.png}
+\caption{ID:053, HOLME-Mainpage-Space Management}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         053 \par  & HOLME-\par Mainpage-\par Space \par Management &Users should be able to add new virtual spaces, as well as edit or delete existing ones, on the 'Space Management' page. Each virtual space is represented as an independent space where users can configure and manage different smart home environments.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/054.png}
+\caption{ID:054, HOLME-Mainpage-Add Space Button }
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         054 \par  & HOLME-\par Mainpage-\par ADD Space \par Button &Users should be able to click the 'Add Space' button to navigate to the 'Add Space' page.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{img/Specific/055.png}
+\caption{ID:055, HOLME-Mainpage-Add Space Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         055 \par  & HOLME-\par Mainpage-\par ADD Space\par Page  &Users should be able to set the name and color of the space to be added on the 'Add Space' page.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/056.png}
+\caption{ID:056, HOLME-Mainpage-Edit Space Button}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         056 \par  & HOLME-\par Mainpage-\par Edit Space\par Button &Users should be able to click the 'Edit Space' button to navigate to the 'Edit Space' page.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{img/Specific/057.png}
+\caption{ID:057, HOLME-Mainpage-Edit Space Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         057 \par  & HOLME-\par Mainpage-\par Edit Space\par Page  &On the 'Space Edit' page, users should be able to view the existing space name and set the name and color for the space they wish to modify.\\ \hline
+    \end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/058.png}
+\caption{ID:058, HOLME-Mainpage-Delete Space Button}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         058 \par  & HOLME-\par Mainpage-\par Delete Space\par Button &Users should be able to see a popup window that provides a cautionary message when they press the 'Delete Space' button.\\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth]{img/Specific/059.png}
+\caption{ID:059, HOLME-Mainpage-Delete Space Popup}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         059 \par  & HOLME-\par Mainpage-\par Delete Space\par Popup  &In a pop-up window, when deleting a space, the user must be informed that settings and routines will also be deleted, and the user should be able to choose between 'Cancel' or 'Delete' buttons to perform their desired action.\\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{6cm}
+
+\item[5] Menubar\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/060.png}
+\caption{ID:060, HOLME-Menubar}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         060 \par  & HOLME-\par Menubar  &The menu bar is responsible for managing 'My settings.' The menu bar should consist of the following five items: 'Device Settings', 'Routine Settings', 'Home', 'Report', 'Settings'.\\ \hline
+    \end{tabular}
+\end{table}
+
+\item[5-1] Device Setting\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\columnwidth]{img/Specific/061.png}
+\caption{ID:061, HOLME-Devices Setting}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         061 \par  & HOLME-\par Device \par Setting  & Predefined detailed settings for various types of IoT devices must be storable. Here, the term "devices" refers to virtual devices, and settings should be configurable for devices that may not have these settings in reality. After users connect a device to a virtual space, the actual device settings should be overridden with the predefined settings.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/062.png}
+\caption{ID:062, HOLME-Devices Setting-Category}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         062 \par  & HOLME-\par Device \par Setting \par Category  & Users should be able to view various pre-categorized types of home appliances in the 'Device Settings' menu. Here are examples of device types that users can configure:Household Appliances(washing machine,refrigerator), Kitchen Appliances(microwave,coffee machine) and so on. \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/063.png}
+\caption{ID:063, HOLME-Devices Setting Button}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         063 \par  & HOLME-\par Device \par Setting \par Button  & When users press the 'Setting' button for the respective device type, they should be taken to a page where they can configure detailed settings. \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/064.png}
+\caption{ID:064, HOLME-Devices Setting Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         064 \par  & HOLME-\par Device \par Setting \par Page  & The settings screen for each device should allow users to save and modify detailed settings for that device. \\ \hline
+         065 \par  & HOLME-\par Device \par Setting \par Save  & The saved settings should be applied when the device is controlled through the app. \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\item[5-2] Routin Setting\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/066.png}
+\caption{ID:066, HOLME-Routine Setting}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         066 \par  & HOLME-\par Routine \par Setting  & 
+Users should be able to view routines on this page, as well as search, edit, and add them. \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\columnwidth]{img/Specific/067.png}
+\caption{ID:067, 068 HOLME-Routine Setting-Edit/Add Buttons}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         067 \par  & HOLME-\par Routine \par Setting- \par EditButton & 
+Users should be able to go to the 'Routine Edit' page by clicking on this button.\\ \hline
+         068 \par  & HOLME-\par Routine \par Setting- \par AddButton & 
+
+Users should be able to go to the 'Add Routine' page by clicking on this button. \\ \hline    
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/069.png}
+\caption{ID:069, 070, 071 HOLME-Routine Setting-Routin Edit Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         069 \par  & HOLME-\par Routine \par Setting- \par Rearrange Routines & 
+Users should be able to long-press a routine to make it floating, allowing them to rearrange routines in their desired order.\\ \hline
+         070 \par  & HOLME-\par Routine \par Setting- \par Delete \par Rotuine & 
+Users should be able to delete the desired routine by clicking the 'X' button in the top left corner of the routine.\\ \hline
+	071 \par  & HOLME-\par Routine \par Setting- \par Done Button & 
+Users should be able to return to the previous page by clicking the 'Done' button once they have finished editing the routine. \\ \hline     
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{img/Specific/072.png}
+\caption{ID:072, HOLME-Routine Setting-Searching}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         072 \par  & HOLME-\par Routine \par Setting- \par Searching  & 
+Users should be able to search for their desired routine using the search bar. \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.2\columnwidth]{img/Specific/073.png}
+\caption{ID:073, HOLME-Routine Setting-edit button for that specific routine}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         073 \par  & HOLME-\par Routine \par Setting- \par edit button \par  for specific \par  routine.  & 
+Users should be able to go to a page where they can edit the specific routine by clicking this button. \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.8\columnwidth]{img/Specific/074.png}
+\caption{ID:074, 075, 076 HOLME-Routine Setting-specific routine Edit Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         074 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Appearance Edit \par Button & 
+Users should be able to navigate to the 'Edit Appearance' page by clicking the icon to the right of the routine name.\\ \hline
+075 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Rearrange Routines & 
+Users should be able to long-press a routine to make it floating, allowing them to rearrange routines in their desired order.\\ \hline
+076 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Add Action \par Button & 
+
+Users should be able to go to a page where they can browse and select the desired actions by clicking the 'Add Action' button.\\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.7\columnwidth]{img/Specific/077.png}
+\caption{ID:077, 078 HOLME-Routine Setting-specific routine-Edit Appearance}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         077  \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Appearance Edit- \par Name & 
+         Users should be able to view the existing name of the routine on this page and change it to a new desired name.
+         \\ \hline
+         078  \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Appearance Edit- \par Color & 
+        Users should be able to see the current color of the routine on this page and change it to a new desired color.
+         \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.5\columnwidth]{img/Specific/079.png}
+\caption{ID:079 HOLME-Routine Setting-specific routine-Add Action}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         079 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Add Action & 
+         Users should be able to add the desired actions of their preferred devices on the 'Add Action' page.
+         \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.5\columnwidth]{img/Specific/080.png}
+\caption{ID:080 HOLME-Routine Setting-specific routine-Add Action-Search}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         080 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Add Action- \par Search & 
+         Users should be able to search for the desired content on the 'Add Action' page.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=1\columnwidth]{img/Specific/081.png}
+\caption{ID:081 HOLME-Routine Setting-Add Routin}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         081 \par  & HOLME-\par Routine \par Setting- \par Add Routine & 
+         Users should be able to create a new routine with the desired name and color.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\vspace{3cm}
+\item[5-3] HOLME Button \\
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=1\columnwidth]{img/Specific/082.png}
+\caption{ID:082 HOLME-Routine Setting-Add Routin}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         082 \par  & HOLME-\par Menubar- \par HOLME Button & 
+         Users should be able to return to the main screen by pressing the HOLME button.
+         \\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+\item[5-4] Report \\
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=1\columnwidth]{img/Specific/083.png}
+\caption{ID:083 HOLME-Report Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         083 \par  & HOLME-\par Report Page & 
+         Users should be able to access reports on their completed activities and events.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+
+\item[5-5] Setting \\
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=1\columnwidth]{img/Specific/084.png}
+\caption{ID:084 HOLME-Setting Page}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         084 \par  & HOLME-\par Settig Page & 
+         Users should be able to navigate from the 'Settings' page to 'My Page' or access options like 'Notification Settings,' 'Network,' 'IoT Services,' 'Change Language,' 'Contact Us,' 'View Terms of Service,' 'View Privacy Policy,' 'View HOLME Information,' and 'Log Out.'
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=1\columnwidth]{img/Specific/085.png}
+\caption{ID:085 HOLME-Setting Page-MyPage}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         085 \par  & HOLME-\par Settig Page- \par MyPage & 
+        Users should be able to change their nickname and profile picture on the 'My Page' and review their account information and additional details. Additionally, they should have the ability to change their password.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.4\columnwidth]{img/Specific/086.png}
+\caption{ID:086 HOLME-Setting Page-MyPage-ProfileEdit}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         086 \par  & HOLME-\par Settig Page- \par MyPage- \par Profile Edit & 
+        Users should be able to change their profile picture with three options: (1) Take a photo, (2) Select from the album, and (3) Change to a default image.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.4\columnwidth]{img/Specific/087.png}
+\caption{ID:087 HOLME-Setting Page-MyPage-NicknameEdit}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         087 \par  & HOLME-\par Settig Page- \par MyPage- \par Nickname Edit & 
+        Users should have the ability to change their nickname, and they should be able to view their current name while doing so.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.7\columnwidth]{img/Specific/088.png}
+\caption{ID:088 HOLME-Setting-Notification}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         088 \par  & HOLME-\par Settig Page- \par Notification & 
+       Users should be able to toggle notification options on and off for different types of notifications within the notification settings.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.8\columnwidth]{img/Specific/089.png}
+\caption{ID:089 HOLME-Setting-Network}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         089 \par  & HOLME-\par Settig Page- \par Network  & 
+       Users should be able to add new networks in the network settings.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.53\columnwidth]{img/Specific/090.png}
+\caption{ID:090 HOLME-Setting-Add Network}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         090 \par  & HOLME-\par Settig Page- \par Add Network & 
+       Users should be able to add new networks in the network settings.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.50\columnwidth]{img/Specific/091.png}
+\caption{ID:091 HOLME-Setting-Network Details}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         091 \par  & HOLME-\par Settig Page- \par Network \par  Details & 
+       Users should be able to view and remove devices connected to a specific Wi-Fi network from the 'Network Details' section.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.6\columnwidth]{img/Specific/092.png}
+\caption{ID:092 HOLME-Setting-IoT Services}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         092 \par  & HOLME-\par Settig Page- \par IoT Services& 
+       Users should be able to view the connected IoT services from the 'IoT Services' section.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.6\columnwidth]{img/Specific/093.png}
+\caption{ID:093 HOLME-Setting-Change Language}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         093 \par  & HOLME-\par Settig Page- \par Change \par Language& 
+       	Users should have the ability to change the language.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.6\columnwidth]{img/Specific/094.png}
+\caption{ID:094 HOLME-Setting-1:1 Inquiry}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         094 \par  & HOLME-\par Settig Page- \par 1:1 Inquiry& 
+       	Users should be able to contact HOLME through the '1:1 Inquiry' section, and they should also have the option to attach photos while submitting their inquiries.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.8\columnwidth]{img/Specific/095.png}
+\caption{ID:095 HOLME-Setting-Terms of Service}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         095 \par  & HOLME-\par Settig Page- \par Terms of Service& 
+       	Users should be able to review the terms of service through the 'Terms of Service' section.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.6\columnwidth]{img/Specific/096.png}
+\caption{ID:096 HOLME-Setting-Privacy Policy}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         096 \par  & HOLME-\par Settig Page- \par Privacy Policy& 
+       	Users should be able to review HOLME's privacy policy through the 'Privacy Policy' section, and they should also be able to set their region and language preferences within this section.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.9\columnwidth]{img/Specific/097.png}
+\caption{ID:097 HOLME-Setting-HOLME Information}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         097 \par  & HOLME-\par Settig Page- \par HOLME Information& 
+       	Users should be able to check HOLME's version and open-source licenses through the 'HOLME Information' section.
+         \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+
+\begin{figure}[h]
+\centering                                         
+\includegraphics[width=0.9\columnwidth]{img/Specific/098.png}
+\caption{ID:098 HOLME-Setting-Log Out}
+\end{figure}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         098 \par  & HOLME-\par Settig Page- \par Log Out& 
+       	Users should be able to log out through the 'Log Out' option.
+         \\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+\subsection{Non-Functional Requirements}
+\item[1] Network Requirements
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+         099 \par  & HOLME-\par Network-\par User Account \par and Authorization  \par Management &Users should create accounts to upload and download configuration data to the cloud. Proper user account management, including role and permission control, is essential.\\ \hline
+         100 \par  & HOLME-\par Network-\par Secure \par Communication  & IoT device configuration data must be transmitted to the cloud in an encrypted state. Secure communication protocols like HTTPS and TLS should be employed to ensure data security.  \\ \hline
+    \end{tabular}
+\end{table}
+\vspace{3cm}
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+        101 \par  & HOLME-\par Network-\par Cross-Platform \par Compatibility & The application should work on various platforms (iOS, Android) and support communication via mobile networks and Wi-Fi.\\ \hline
+         102 \par  & HOLME-\par Network-\par Data \par Synchronization & Adequate synchronization mechanisms must be implemented when uploading and downloading IoT device configuration data to/from the cloud. This ensures that data remains consistent across devices.\\ \hline
+         103 \par  & HOLME-\par Network-\par Low Bandwidth \par Adaptation  & Considering users may have limited network bandwidth, the application may require data compression and optimization to minimize bandwidth usage.\\ \hline
+         104 \par  & HOLME-\par Network-\par Error Handling \par and Logging  & The application should handle network errors and exceptions properly. It must log error messages and debugging information to assist in problem identification and resolution.\\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{3cm}
+\item[2] Security requirements
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+        105 \par  & HOLME-\par Security-\par Data \par Protection & User and device configuration information should be encrypted using appropriate data protection mechanisms. Secure communication protocols such as TLS/SSL should be used to protect data during transit.\\ \hline
+         106 \par  & HOLME-\par Security-\par Authorization & The system should implement an authorization management system to control user and administrator permissions. Access permissions to data and settings should be controlled based on user roles.\\ \hline
+         107 \par  & HOLME-\par Security-\par Authentication  & Users and administrators should log in using secure and strong authentication methods. Support for additional security authentication methods like Two-Factor Authentication (2FA) is important. \\ \hline
+         108 \par  & HOLME-\par Security-\par Security \par Updates  & The system and application should receive regular security updates and patches. Security vulnerabilities should be promptly addressed and mitigated.\\ \hline
+         109 \par  & HOLME-\par Security-\par Logging and \par  Auditing  &The system should generate and store log records, including significant security events and user activities. It should provide auditing and analysis capabilities for monitoring and responding to security incidents. \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+        110 \par  & HOLME-\par Security-\par Physical \par Security  &Physical security measures should be implemented to protect cloud data centers and servers. Measures to restrict physical intrusion and equipment access are necessary. \\ \hline
+        111 \par  & HOLME-\par Security-\par Disaster \par Recovery & Disaster recovery plans need to be in place in case of data loss or system failure. Regular testing and maintenance of recovery strategies are essential. \\ \hline
+        112 \par  & HOLME-\par Security-\par Security \par Education and \par Awareness & Security education and awareness programs should be provided to users and administrators. \\ \hline
+        113 \par  & HOLME-\par Security-\par Access \par Control & Strict access controls should be in place for users to access and modify device settings and data. \\ \hline
+         114 \par  & HOLME-\par Security-\par External \par Threat Response & Measures and actions for responding to malicious attacks, intrusion attempts, and other external threats should be established. \\ \hline
+    \end{tabular}
+\end{table}
+
+\item[3] Performance requirements
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+        115 \par  & HOLME-\par Performance-\par Response \par Time  &The application must retrieve device configuration data from the cloud quickly. Minimizing the time required for users to download settings is crucial.  \\ \hline
+        116 \par  & HOLME-\par Performance-\par Scalability & The application should be able to manage hundreds, thousands, or even tens of thousands of IoT device configurations. It must support scalability to handle an increasing number of users and IoT devices without compromising performance. \\ \hline
+        117 \par  & HOLME-\par Performance-\par Network \par Bandwidth & Efficiently utilize bandwidth when downloading settings from the cloud to provide fast download speeds. Include features for bandwidth minimization and data compression. \\ \hline
+        118 \par  & HOLME-\par Performance-\par Local Caching & Cache downloaded device configurations locally to prevent users from re-downloading the same settings. Manage the validity period of cached data and update it as needed. \\ \hline
+         119 \par  & HOLME-\par Performance-\par Error Handling & Proper error handling should be in place for errors that may occur during downloads. Provide error messages and debugging information to assist users in troubleshooting issues. \\ \hline
+    \end{tabular}
+\end{table}
+\vspace{3cm}
+
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+        120 \par  & HOLME-\par Performance-\par Concurrency &The application should handle multiple users and numerous IoT device configuration requests simultaneously. Manage concurrency to support parallel processing while maintaining response times.  \\ \hline
+        121\par  & HOLME-\par Performance-\par Performance \par Testing & Conduct performance testing to validate response time, bandwidth usage, and scalability. Identify and optimize bottlenecks for performance improvement. \\ \hline
+        122 \par  & HOLME-\par Performance-\par Logging and \par   Monitoring & Provide logging and monitoring features to record events and monitor system performance. Enable data collection and analysis for tracking the system's status and performance. \\ \hline
+    \end{tabular}
+\end{table}
+\vspace{1cm}
+
+\item[4] Management and maintenance requirements
+\begin{table}[h]
+\def\arraystretch{1.2} \small
+    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
+        \hline
+        ID & Name & Description\\ \hline
+        123 \par  & HOLME-\par Management \par and \par maintenance-\par Reliability and \par Availability& Ensure stable management and storage of customers' IoT device configurations. Establish backup and recovery strategies to guarantee service availability.
+  \\ \hline
+        124\par  & HOLME-\par Management \par and \par maintenance- \par Data Backup \par and Recovery & Regularly back up IoT device configuration data. Provide data recovery capabilities in case of data loss. \\ \hline
+        125 \par  & HOLME-\par Management \par and \par maintenance- \par Scalability & Ensure the application operates stably as the number of users and IoT devices increases. Support resource and server scaling for efficient resource utilization. \\ \hline
+        126 \par  & HOLME-\par Management \par and \par maintenance- \par Update \par Management& Regularly receive and manage updates, including security patches and new feature additions. Ensure seamless update management. \\ \hline
+        127 \par  & HOLME-\par Management \par and \par maintenance- \par Data Integrity & Maintain data integrity for IoT device configuration data stored in the cloud. Implement mechanisms to prevent data alteration or corruption. \\ \hline
+        128 \par  & HOLME-\par Management \par and \par maintenance- \par Logging and \par Monitoring & The application should record events and logs for monitoring system health and performance. Provide tools and dashboards for monitoring system status and performance. \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+
+\end{enumerate}
+\clearpage
 
 
 
@@ -577,6 +1857,14 @@ Zoom is an online video conferencing and collaboration software that is used for
 \bibitem{SpringBoot}  “SpringBoot,” https://spring.io/projects/spring-boot, 2023.
 \bibitem{Hivernate}  “Hivernate,” https://hibernate.org/, 2023.
 \bibitem{gRPC}  “gRPC,” https://grpc.io/, 2023.
+\bibitem{LightBulb} CSA. "Matter Device Library Specification." CSA, 2023, 27~28 pages
+\bibitem{Refrigerator} CSA. "Matter Device Library Specification." CSA, 2023, 69~72 pages
+\bibitem{WaterDispensor} CSA. "Matter Device Library Specification." CSA, 2023, 69~72 pages
+\bibitem{Televison} CSA. "Matter Device Library Specification." CSA, 2023, 75~89 pages
+\bibitem{Soundbar} CSA. "Matter Device Library Specification." CSA, 2023, 84~85 pages
+\bibitem{MassageChair} CSA. "Matter Device Library Specification." CSA, 2023, 91 pages
+\bibitem{Blind} CSA. "Matter Device Library Specification." CSA, 2023, 66~68 pages
+
 \end{thebibliography}
 
 \end{document}
