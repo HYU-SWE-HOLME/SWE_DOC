@@ -337,8 +337,8 @@ When a user loads their smart home environment, considering the likelihood that 
 (1) When function replication is possible: automatic connection and function execution.\\
 (2) When function replication is not possible: submit a report.
 \\
-
 \end{enumerate}
+
 
 \subsection{Hotel-Specific}
 \begin{enumerate}
@@ -447,11 +447,19 @@ Hibernate is an open-source Object-Relational Mapping (ORM) framework for Java. 
 \caption{gRPC} 
 \end{figure}\\
 gRPC is a high-performance Remote Procedure Call (RPC) framework developed by Google, designed to facilitate communication between services in various environments. gRPC uses Protocol Buffers for data exchange, offering an efficient binary format that allows message definitions to be shared across multiple programming languages. The framework supports multiple programming languages, making it possible for clients and servers written in different languages to communicate seamlessly. Operating based on the HTTP/2 protocol, gRPC provides efficient and fast communication, featuring features such as multiplexing, header compression, bidirectional communication, and more. Additionally, gRPC includes automatic code generation, simplifying developer tasks and ensuring type safety. Widely used in cloud and microservices architectures, gRPC supports efficient service-to-service communication.\\
+
+\item [(5)] Flask\cite{Flask}\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.55\columnwidth]{img/DevEnv/flask.png}
+\caption{Flask} 
+\end{figure}\\
+Flask is a lightweight and extensible Python web framework used for developing web applications. It provides developers with a concise yet flexible structure for efficient work. With features such as URL routing, template engine, and session management, Flask offers scalability to add necessary functionalities flexibly. Known for its simple syntax and high flexibility, Flask is favored by many developers and can be employed in a variety of projects, ranging from small-scale initiatives to large-scale web applications.\\
 \end{itemize}
 \end{itemize}
 
 \item[3] Cost Estimation\\
-To implement HOLME, it was necessary to obtain data from the database or obtain real-time information from the server while communicating with the server in real-time. Therefore, real-time server hosting or multiple APIs were required. However, during the development process, we initially made efforts to utilize open APIs, free modules, and free servers.\\
+To implement HOLME, it was necessary to obtain data from the database or obtain real-time information from the server while communicating with the server in real-time. Therefore, real-time server hosting or multiple APIs were required. However, during the development process, we initially made efforts to utilize open APIs, free modules, and free servers.\\\\\\
 
 \item[4] Development Environment
 \begin{table}[h]
@@ -544,6 +552,7 @@ Furthermore, LaTeX is well-known for its strong community support and various pa
 GitHub is a web-based platform and service for version control and collaboration. It is widely used by developers and teams to manage and track changes in their code, making it an essential tool for software development. GitHub provides a centralized platform where developers can store, manage, and collaborate on their source code, as well as track any modifications or issues related to their projects.
 One of GitHub's core features is Git, a distributed version control system. Git enables developers to track changes, work on different aspects of a project simultaneously, and merge their work efficiently. GitHub adds a collaborative layer on top of Git, allowing multiple team members to work on a project collaboratively, making it easier to handle pull requests and code reviews.
 GitHub hosts millions of public repositories, making it a valuable resource for open-source projects. It offers features like issues tracking, project management boards, and wikis, helping teams streamline their development processes. Moreover, GitHub Actions allows for automated workflows, further enhancing productivity.\\
+\clearpage
 
 \item[9] Notion
 \begin{figure}[h]
@@ -551,27 +560,21 @@ GitHub hosts millions of public repositories, making it a valuable resource for 
 \includegraphics[width=.5\columnwidth]{img/DevEnv/Notion.jpg}
 \caption{Notion} 
 \end{figure}\\
-Notion is an all-in-one productivity platform for collaboration, note-taking, project management, and knowledge-based tasks. It caters to both personal note-taking and collaborative work, allowing users to scale up for larger projects and team-based tasks. Notion offers a wide range of features and flexibility to create a customized work environment tailored to the unique needs of its users.
-Notion employs a block-based approach to organizing information, providing users with creative flexibility. Users can combine various block types, including text, images, videos, checklists, tables, calendars, databases, and more, to structure their content as needed. This goes beyond simple text documents, making it suitable for tasks such as project planning, task tracking, knowledge base creation, and more.
-Furthermore, Notion excels in supporting team collaboration. Multiple users can simultaneously edit documents and share notes for real-time collaboration. It includes features like comments, to-do lists, calendar management, and other collaboration-related tools. With these diverse features and high levels of customization, Notion is widely adopted as an effective productivity tool for both personal and business use.\\
+Notion is an all-in-one productivity platform for collaboration, note-taking, project management, and knowledge-based tasks. It caters to both personal note-taking and collaborative work, allowing users to scale up for larger projects and team-based tasks. Notion employs a block-based approach to organizing information, providing users with creative flexibility to structure content using various block types like text, images, videos, checklists, tables, calendars, and databases. This versatility extends its utility beyond simple text documents, making it suitable for diverse tasks such as project planning, task tracking, and knowledge base creation. Notion excels in supporting team collaboration with features like real-time editing, comments, to-do lists, calendar management, and other collaboration tools. Its diverse features and high levels of customization make it widely adopted as an effective productivity tool for personal and business use.\\
 
 \item[10] Zoom
 \begin{figure}[h]
 \centering
 \includegraphics[width=.5\columnwidth]{img/DevEnv/Zoom.jpg}
 \caption{Zoom} 
-\end{figure}\\
-Zoom is an online video conferencing and collaboration software that is used for remote communication and collaboration. This platform offers various features such as video meetings, webinars, screen sharing, group chat, and file sharing, enabling users to work and communicate efficiently. It is widely used, especially to support remote work and education across regions and internationally.\\
+\end{figure}\\Zoom is an online video conferencing and collaboration software used for remote communication. This platform offers features like video meetings, webinars, screen sharing, group chat, and file sharing, facilitating efficient work and communication. Widely used to support remote work and education internationally.\\
 \end{enumerate}
 
 
 
-
-
 \section{REQUIREMENT SPECIFICATION}
-\subsection{Functional Requirements}
+\subsection{Entry}
 \begin{enumerate}
-\item[1] Entry
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.38\columnwidth]{img/Specific/001.png}
@@ -587,7 +590,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \end{tabular}
 \end{table}
 
-\item[2] Tutorial\\
+\subsection{Entry}
 
 \begin{figure}[h]
 \centering
@@ -599,9 +602,11 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         002 \par  & HOLME-\par Tutorial &Upon the initial download of the application, a tutorial screen must be displayed to the user. The tutorial screen should contain information explaining the key features and usage of the application.\\ \hline
+         002 \par  & HOLME-\par Tutorial &
+Upon the initial download of the application, a tutorial screen must be displayed to the user. The tutorial screen should consist of approximately 4 pages, providing information that explains the key features and usage of the application.\\ \hline
     \end{tabular}
 \end{table}
+\clearpage
 
 \vspace{1cm}
 
@@ -623,14 +628,14 @@ Zoom is an online video conferencing and collaboration software that is used for
          004 \par  & HOLME-\par Tutorial-\par Navigate &Within the tutorial screen, users should be provided with an option to navigate to the next page of the tutorial. When users reach the last page of the tutorial, they should be presented with the option to proceed to the registration steps.\\ \hline
     \end{tabular}
 \end{table}
-\clearpage
 
+\vspace{1cm}
 
-\item[3] Sign-Up and Log-In
+\subsection{Sign-Up and Log-In}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.4\columnwidth]{img/Specific/005.png}
+\includegraphics[width=0.45\columnwidth]{img/Specific/005.png}
 \caption{ID:005, HOLME-Login-Page}
 \end{figure}
 
@@ -658,7 +663,6 @@ Zoom is an online video conferencing and collaboration software that is used for
 	\end{tabular}
 \end{table}
 
-
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{img/Specific/007.png}
@@ -672,6 +676,7 @@ Zoom is an online video conferencing and collaboration software that is used for
          007 \par  & HOLME-\par SignUp-\par Phone \par Number &Users are required to enter their phone number. The phone number will serve as the user's ID during the login process after registration. The validity of the phone number should be verified through the authentication system of the mobile service provider.\\ \hline
 	\end{tabular}
 \end{table}
+\clearpage
 
 
 \begin{figure}[h]
@@ -688,8 +693,6 @@ Zoom is an online video conferencing and collaboration software that is used for
 	\end{tabular}
 \end{table}
 
-\clearpage
-
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{img/Specific/009.png}
@@ -700,13 +703,14 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         009 \par  & HOLME-\par SignUp-\par Name and \par Birthdate &Users must enter their name and date of birth. This information will be used for 'ID retrieval' purposes.\\ \hline
+         009 \par  & HOLME-\par SignUp-\par Name and \par Birthdate &Users must enter their name and date of birth. This information will be used for 'ID retrieval' purposes. The date of birth should be entered in the 'YY/MM/DD' format, and gender will be verified based on the first digit of the resident registration number.
+This information is utilized for the 'Find ID' functionality.\\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\columnwidth]{img/Specific/010.png}
+\includegraphics[width=0.7\columnwidth]{img/Specific/010.png}
 \caption{ID:010, HOLME-SignUp-PreventingDuplicate-Phonenumber}
 \end{figure}
 \begin{table}[h]
@@ -731,10 +735,11 @@ Zoom is an online video conferencing and collaboration software that is used for
          011 \par  & HOLME-\par SignUp-\par Registration \par Completed &Upon successful registration, a notification should be displayed to the user, and they should be automatically redirected to the login process.\\ \hline
 	\end{tabular}
 \end{table}
+\clearpage
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\columnwidth]{img/Specific/012.png}
+\includegraphics[width=0.4\columnwidth]{img/Specific/012.png}
 \caption{ID:012, HOLME-Login-Types}
 \end{figure}
 \begin{table}[h]
@@ -747,25 +752,23 @@ Zoom is an online video conferencing and collaboration software that is used for
 	\end{tabular}
 \end{table}
 
-\clearpage
-
-
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.82\columnwidth]{img/Specific/014.png}
+\includegraphics[width=0.5\columnwidth]{img/Specific/014.png}
 \caption{ID:014, HOLME-Login-Local Failed(1)}
 
-\includegraphics[width=0.82\columnwidth]{img/Specific/015.png}
+\includegraphics[width=0.5\columnwidth]{img/Specific/015.png}
 \caption{ID:015, HOLME-Login-Local Failed(2)}
-
 \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
     \hline
     ID & Name & Description\\ \hline
-     013 \par  & HOLME-\par Login-\par Local Success &If the ID and password entered by the user exist in the member database, the user will successfully log in and be directed to the main page.\\ \hline
+013 \par  & HOLME-\par Login-\par Local Success &If the ID and password entered by the user exist in the member database, the user will successfully log in and be directed to the main page.\\ \hline
 014 \par  & HOLME-\par Login-\par Local Failed(1) &If the user enters their ID and password, but either the ID or the password is incorrect, a popup window will request the user to check their ID and password again.\\ \hline
 015 \par  & HOLME-\par Login-\par Local Failed(2) &If the phone number and password entered by the user do not exist in the member database, the user will fail to log in, and a popup window will display the message 'Non-existent Member'.\\ \hline
 \end{tabular}
 \end{figure}
+
+
 
 \begin{figure}[h]
 \centering
@@ -777,7 +780,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         016 \par  & HOLME-\par Login-\par SNS login &The system utilizes SNS registration APIs such as Google, Apple, Facebook, Amazon, Naver, Kakao, and more.\\ \hline
+         016 \par  & HOLME-\par Login-\par SNS login &The system utilizes SNS registration APIs such as Google, Apple, Facebook, Amazon, Naver, Kakao, and more. Users should be able to conveniently log in through these platforms.\\ \hline
     \end{tabular}
 \end{table}
 \begin{figure}[h]
@@ -840,7 +843,7 @@ Zoom is an online video conferencing and collaboration software that is used for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\columnwidth]{img/Specific/021.png}
+\includegraphics[width=0.8\columnwidth]{img/Specific/021.png}
 \caption{ID:021, HOLME-Login-Password Reset Page}
 \end{figure}
 \begin{table}[h]
@@ -855,15 +858,15 @@ Zoom is an online video conferencing and collaboration software that is used for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.65\columnwidth]{img/Specific/022.png}
-\caption{ID:022, HOLME-Login-Password Reset Authentication}
+\includegraphics[width=0.60\columnwidth]{img/Specific/022.png}
+\caption{ID:022, HOLME-Login-Password Reset-Authentication}
 \end{figure}
 \begin{table}[h]
 \def\arraystretch{1.2} \small
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         022 \par  & HOLME-\par Login-\par Password \par Reset \par Authentication &The system should provide users with instructions for setting a new password through carrier-based-verification.\\ \hline
+         022 \par  & HOLME-\par Login-\par Password \par Reset- \par Authentication &The system should offer users guidance on setting a new password through carrier-based verification. Upon successful carrier authentication, users will be directed to the 'Password Reset' page; in case of failure, they will return to this page.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -905,19 +908,19 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         025 \par  & HOLME-\par Login-\par Language \par Select &Users should be able to select their preferred language from the available options. After changing the language, the interface and text should be switched to the selected language. The user's language preference should be retained even if they exit and restart the application.\\ \hline
+         025 \par  & HOLME-\par Login-\par Language \par Select &Users should have the capability to choose their preferred language from the available options. Upon changing the language, both the interface and text content should seamlessly switch to the selected language. The user's language preference must be retained even if they exit and restart the application. To facilitate language selection, countries worldwide should be listed continent-wise and sorted alphabetically by country code, allowing users to easily switch to the language associated with their chosen country.\\ \hline
     \end{tabular}
 \end{table}
 \clearpage
 
-\item[4] Mainpage\\
+\subsection{Mainpage}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\columnwidth]{img/Specific/026.png}
 \caption{ID:026, HOLME-Mainpage}
 \end{figure}
 \begin{table}[h]
-\def\arraystretch{1.2} \small
+\def\arr M,NB.JUHIKY87LOV9G60FT5CRD45RD4xe.aym,nksbbtr m,mnbvjkhgcbmnb,vjhetch{1.2} \small
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
@@ -937,7 +940,7 @@ Zoom is an online video conferencing and collaboration software that is used for
         \hline
         ID & Name & Description\\ \hline
          028 \par  & HOLME-\par Mainpage-\par Simple \par Control &
-         On the main page set as the current space, users should be able to easily control connected IoT devices remotely.\\ \hline
+         On the main page, designated as the current space, users should have the ability to effortlessly manage connected IoT devices remotely. This includes performing simple functions such as temperature control and power on/off.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -956,9 +959,9 @@ Zoom is an online video conferencing and collaboration software that is used for
          Furthermore, users should be able to utilize these features through an artificial intelligence speaker.\\ \hline
     \end{tabular}
 \end{table}
-
 \clearpage
-\item[4-1] Instances\\
+
+\item[(+)] Instances\\
 \begin{itemize}
 \item [(1)] AirConditioner
 \begin{table}[h]
@@ -966,16 +969,15 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         030 \par  & HOLME-\par Instances-\par AirConditioner-Check \par Temperature & User must be able to check the temperature.\\ \hline
-         031 \par  & HOLME-\par Instances-\par AirConditioner-Check \par Humidity & User must be able to check the humidity.\\ \hline
-         032 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Temperature & User must be able to adjust the temperature.\\ \hline
-         033 \par  & HOLME-\par Instances-\par AirConditioner-Contorl \par Power & User must be able to control the power.\\ \hline
-         034 \par  & HOLME-\par Instances-\par AirConditioner-Select \par Opertating mode & User must be  able to select the operating mode.\\ \hline
+         030 \par  & HOLME-\par Instances-\par AirConditioner-Check \par Temperature & The user must be able to check the temperature. The temperature should be represented as an integer in degrees Celsius (°C). Additionally, it should be capable of displaying temperatures ranging from -20°C to 50°C.\\ \hline
+         031 \par  & HOLME-\par Instances-\par AirConditioner-Check \par Humidity & The user must be able to check the humidity. Humidity should be represented as an integer in percentage, and it should be capable of displaying values ranging from 0 percentage to 100 percentage.\\ \hline
+         032 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Temperature & The user should have the ability to adjust the temperature, which is divided into temperature increase and temperature decrease. Each press results in a one-degree Celsius change. Temperature adjustment is limited to the range of 18 to 28 degrees Celsius.\\ \hline
+         033 \par  & HOLME-\par Instances-\par AirConditioner-Control \par Power & The user must be able to control the power, indicating the ability to turn the air conditioner on and off.\\ \hline
+         034 \par  & HOLME-\par Instances-\par AirConditioner-Select \par Opertating mode & The user must be able to select the operating mode, cycling through the modes with each button press. This should be done in a circular manner, meaning that once the list of modes is traversed, it should return to the initial mode.\\ \hline
          035 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par direction of \par the airflow & User must be able to adjust the direction of the airflow (up and down).\\ \hline
-         036 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Fan Speed & User must be able to adjust the fan speed.\\ \hline
-         037 \par  & HOLME-\par Instances-\par AirConditioner-Run \par SmartCare & User must be able to run Smart Care (self-diagnosis).\\ \hline
-         038 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Screen \par brightness & User must be able to adjust the screen brightness.\\ \hline
-         039 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Power saving \par modes & User must be able to activate and deactivate the power-saving mode.\\ \hline
+         036 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Fan Speed & The user must be able to adjust the fan speed, which is set to low/medium/high. It should change by pressing the buttons.\\ \hline
+         037 \par  & HOLME-\par Instances-\par AirConditioner-Run \par SmartCare & The user can run Smart Care for numerical feedback and detailed information on the system's health and performance, allowing the air conditioner to conduct a comprehensive self-assessment with specific diagnostic data and suggested actions.\\ \hline
+         038 \par  & HOLME-\par Instances-\par AirConditioner-Adjust \par Screen \par brightness & The user must be able to adjust the screen brightness. The screen brightness is divided into dim/normal/bright, and it should be switchable by pressing the buttons.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -986,13 +988,15 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         040 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Drying mode & User must be able to activate the automatic drying mode.\\ \hline
-         041 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Tropical nigth \par sleep mode & User must be able to activate the tropical night sleep mode.\\ \hline
-         042 \par  & HOLME-\par Instances-\par AirConditioner-Set \par On-time \par reservation \par by the hour & User must be able to set on-time reservations by the hour.\\ \hline
-         043 \par  & HOLME-\par Instances-\par AirConditioner-Set \par Off-time \par reservation \par by the hour & User must be able to  set off-time reservations by the hour.\\ \hline
+         039 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Power saving \par modes & User must be able to activate and deactivate the power-saving mode.\\ \hline
+         040 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Drying mode & User must be able to activate and deactivate the automatic drying mode.\\ \hline
+         041 \par  & HOLME-\par Instances-\par AirConditioner-Activate \par Tropical nigth \par sleep mode & User must be able to activate and deactivate the tropical night sleep mode.\\ \hline
+         042 \par  & HOLME-\par Instances-\par AirConditioner-Set \par On-time \par reservation \par by the hour & The user must be able to set on-time reservations by the hour. Each press of the button increases the reservation time by one hour, with a maximum reservation of up to 24 hours.\\ \hline
+         043 \par  & HOLME-\par Instances-\par AirConditioner-Set \par Off-time \par reservation \par by the hour & User must be able to  set off-time reservations by the hour. Each press of the button increases the reservation time by one hour, with a maximum reservation of up to 24 hours.\\ \hline
          044 \par  & HOLME-\par Instances-\par AirConditioner-Cancel \par specified reservations & User must be able to cancel specified reservations.\\ \hline
     \end{tabular}
 \end{table}
+
 \item [(2)] LightBulb\cite{LightBulb}\\
 \item [(3)] Refrigerator\cite{Refrigerator}\\
 \item [(5)] WaterDispensor\cite{WaterDispensor}\\
@@ -1001,20 +1005,21 @@ Zoom is an online video conferencing and collaboration software that is used for
 \item [(8)] MassageChair\cite{MassageChair}\\
 \item [(9)] Blind\cite{Blind}\\
 \end{itemize}
+
 \clearpage
 
-\item[4] Mainpage(.cont)\\
+\subsection{Mainpage(.cont)}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.3\columnwidth]{img/Specific/045.png}
-\caption{ID:045, HOLME-Mainpage-Device addition Button}
+\caption{ID:045, HOLME-Mainpage-QR Code Button}
 \end{figure}
 \begin{table}[h]
 \def\arraystretch{1.2} \small
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         045 \par  & HOLME-\par Mainpage-\par Device \par addition \par Button &Users should be able to touch the "Add Device" button on the main page to transition to the QR code recognition screen.\\ \hline
+         045 \par  & HOLME-\par Mainpage-\par QR Code \par Button &Users should be able to touch the "QR Code" button on the main page to transition to the QR code recognition screen.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -1022,7 +1027,7 @@ Zoom is an online video conferencing and collaboration software that is used for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.6\columnwidth]{img/Specific/046.png}
+\includegraphics[width=0.5\columnwidth]{img/Specific/046.png}
 \caption{ID:046, HOLME-Mainpage-QRcode}
 \end{figure}
 \begin{table}[h]
@@ -1036,7 +1041,7 @@ Zoom is an online video conferencing and collaboration software that is used for
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\columnwidth]{img/Specific/047.png}
+\includegraphics[width=0.8\columnwidth]{img/Specific/047.png}
 \caption{ID:047, HOLME-Mainpage-RoutineExcution}
 \end{figure}
 \begin{table}[h]
@@ -1044,7 +1049,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         047 \par  & HOLME-\par Mainpage-\par Routine \par Excution &Users should be able to execute pre-set routines in the current space on the main page.\\ \hline
+         047 \par  & HOLME-\par Mainpage-\par Routine \par Excution &Users should be able to execute pre-set routines on the main page. While only 4 are visible initially, users should be able to slide horizontally to view other routines.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -1087,13 +1092,13 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         050 \par  & HOLME-\par Mainpage-\par Virtual \par Space List&Users should be able to check the list of virtual spaces and, at any time, set a different virtual space as the current space.\\ \hline
+         050 \par  & HOLME-\par Mainpage-\par Virtual \par Space List&Users should be able to check the list of virtual spaces and, at any point, designate a different virtual space as the current space. Note that the maximum number of displayed spaces is limited to 10.\\ \hline
     \end{tabular}
 \end{table}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.47\columnwidth]{img/Specific/051.png}
+\includegraphics[width=0.44\columnwidth]{img/Specific/051.png}
 \caption{ID:051, HOLME-Mainpage-Space Change}
 \end{figure}
 \begin{table}[h]
@@ -1158,7 +1163,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         055 \par  & HOLME-\par Mainpage-\par ADD Space\par Page  &Users should be able to set the name and color of the space to be added on the 'Add Space' page.\\ \hline
+         055 \par  & HOLME-\par Mainpage-\par ADD Space\par Page  &Users should be able to specify the name and color of the space when adding it on the 'Add Space' page. The name should be limited to 50 characters, and for the color, users can either input RGB values or choose from a provided palette.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -1186,7 +1191,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         057 \par  & HOLME-\par Mainpage-\par Edit Space\par Page  &On the 'Space Edit' page, users should be able to view the existing space name and set the name and color for the space they wish to modify.\\ \hline
+         057 \par  & HOLME-\par Mainpage-\par Edit Space\par Page  &On the 'Space Edit' page, users should be able to see the current space name and have the option to set a new name and color for the space they intend to modify. The name should not exceed 50 characters, and for the color, users can either input RGB values or choose from a provided palette.\\ \hline
     \end{tabular}
 \end{table}
 
@@ -1222,7 +1227,7 @@ Zoom is an online video conferencing and collaboration software that is used for
 
 \vspace{6cm}
 
-\item[5] Menubar\\
+\subsection{Menubar}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{img/Specific/060.png}
@@ -1237,7 +1242,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \end{tabular}
 \end{table}
 
-\item[5-1] Device Setting\\
+\subsection{Device Setting}
 
 \begin{figure}[h]
 \centering
@@ -1268,6 +1273,7 @@ Zoom is an online video conferencing and collaboration software that is used for
     \end{tabular}
 \end{table}
 
+\vspace{3cm}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{img/Specific/063.png}
@@ -1292,13 +1298,14 @@ Zoom is an online video conferencing and collaboration software that is used for
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         064 \par  & HOLME-\par Device \par Setting \par Page  & The settings screen for each device should allow users to save and modify detailed settings for that device. \\ \hline
+         064 \par  & HOLME-\par Device \par Setting \par Page  & 
+The settings screen for each device should enable users to save and modify detailed settings for that particular device. Additionally, users should be able to make adjustments to specific settings, with modifications working in increments of one for positive integers or performing On/Off functions. \\ \hline
          065 \par  & HOLME-\par Device \par Setting \par Save  & The saved settings should be applied when the device is controlled through the app. \\ \hline
     \end{tabular}
 \end{table}
 \clearpage
 
-\item[5-2] Routin Setting\\
+\subsection{Routine Setting}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{img/Specific/066.png}
@@ -1310,7 +1317,8 @@ Zoom is an online video conferencing and collaboration software that is used for
         \hline
         ID & Name & Description\\ \hline
          066 \par  & HOLME-\par Routine \par Setting  & 
-Users should be able to view routines on this page, as well as search, edit, and add them. \\ \hline
+
+Users should be able to view routines on this page, and they should also have the ability to search, edit, and add routines. The maximum number of displayed routines is 50, and users can scroll down to see more. \\ \hline
     \end{tabular}
 \end{table}
 
@@ -1396,7 +1404,7 @@ Users should be able to go to a page where they can edit the specific routine by
          074 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Appearance Edit \par Button & 
 Users should be able to navigate to the 'Edit Appearance' page by clicking the icon to the right of the routine name.\\ \hline
 075 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Rearrange Routines & 
-Users should be able to long-press a routine to make it floating, allowing them to rearrange routines in their desired order.\\ \hline
+Users should be able to long-press a routine to make it floating, enabling them to rearrange routines in their desired order. The maximum number of displayed actions is 50, and users can scroll down to see more.\\ \hline
 076 \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Add Action \par Button & 
 
 Users should be able to go to a page where they can browse and select the desired actions by clicking the 'Add Action' button.\\ \hline
@@ -1415,10 +1423,10 @@ Users should be able to go to a page where they can browse and select the desire
         \hline
         ID & Name & Description\\ \hline
          077  \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Appearance Edit- \par Name & 
-         Users should be able to view the existing name of the routine on this page and change it to a new desired name.
+         Users should be able to see the current name of the routine on this page and have the option to change it to a new desired name. The name should be limited to a maximum of 50 characters.
          \\ \hline
          078  \par  & HOLME-\par Routine \par Setting- \par Specific  \par Routine Edit- \par Appearance Edit- \par Color & 
-        Users should be able to see the current color of the routine on this page and change it to a new desired color.
+        Users should be able to view the current color of the routine on this page and have the option to change it to a new desired color. Users can either input RGB values or choose from a provided palette to select the color they prefer.
          \\ \hline
     \end{tabular}
 \end{table}
@@ -1458,7 +1466,7 @@ Users should be able to go to a page where they can browse and select the desire
 
 \begin{figure}[h]
 \centering                                         
-\includegraphics[width=1\columnwidth]{img/Specific/081.png}
+\includegraphics[width=0.95\columnwidth]{img/Specific/081.png}
 \caption{ID:081 HOLME-Routine Setting-Add Routin}
 \end{figure}
 \begin{table}[h]
@@ -1467,12 +1475,13 @@ Users should be able to go to a page where they can browse and select the desire
         \hline
         ID & Name & Description\\ \hline
          081 \par  & HOLME-\par Routine \par Setting- \par Add Routine & 
-         Users should be able to create a new routine with the desired name and color.
+Users should be able to create a new routine with the desired name and color. The name should be limited to a maximum of 50 characters, and for the color, users can either input RGB values or choose from a provided palette to select the color they prefer.
          \\ \hline
     \end{tabular}
 \end{table}
 \vspace{3cm}
-\item[5-3] HOLME Button \\
+
+\subsection{HOLME Button}
 \begin{figure}[h]
 \centering                                         
 \includegraphics[width=1\columnwidth]{img/Specific/082.png}
@@ -1483,14 +1492,14 @@ Users should be able to go to a page where they can browse and select the desire
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         082 \par  & HOLME-\par Menubar- \par HOLME Button & 
+         082 \par  & HOLME-\par Menubar- \par HOLME \par Button & 
          Users should be able to return to the main screen by pressing the HOLME button.
          \\ \hline
     \end{tabular}
 \end{table}
 
 \vspace{1cm}
-\item[5-4] Report \\
+\subsection{Report}
 \begin{figure}[h]
 \centering                                         
 \includegraphics[width=0.7\columnwidth]{img/Specific/083.png}
@@ -1502,18 +1511,14 @@ Users should be able to go to a page where they can browse and select the desire
         \hline
         ID & Name & Description\\ \hline
          083 \par  & HOLME-\par Report Page & 
-         Users should be able to access reports on their completed activities and events. The report should include the following content: AI-driven substitutions for what can be replaced and what cannot be replaced, in consideration of Replaceability.
-
-
-
-
+        Users should be able to access reports on their completed activities and events. The report should include AI-driven substitutions for items that can be replaced and those that cannot, taking into consideration their replaceability. The maximum number of displayed reports is limited to 50.
          \\ \hline
     \end{tabular}
 \end{table}
 \clearpage
 
 
-\item[5-5] Setting \\
+\subsection{Settings}
 \begin{figure}[h]
 \centering                                         
 \includegraphics[width=1\columnwidth]{img/Specific/084.png}
@@ -1664,8 +1669,7 @@ If connected IoT services exist, users should be able to import device lists or 
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         093 \par  & HOLME-\par Settig Page- \par Change \par Language& 
-       	Users should have the ability to change the language.
+         093 \par  & HOLME-\par Settig Page- \par Change \par Language&Users should have the capability to choose their preferred language from the available options. Upon changing the language, both the interface and text content should seamlessly switch to the selected language. The user's language preference must be retained even if they exit and restart the application. To facilitate language selection, countries worldwide should be listed continent-wise and sorted alphabetically by country code, allowing users to easily switch to the language associated with their chosen country..
          \\ \hline
     \end{tabular}
 \end{table}
@@ -1681,14 +1685,13 @@ If connected IoT services exist, users should be able to import device lists or 
     \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
         \hline
         ID & Name & Description\\ \hline
-         094 \par  & HOLME-\par Settig Page- \par 1:1 Inquiry& 
-       	Users should be able to contact HOLME through the '1:1 Inquiry' section, and they should also have the option to attach photos while submitting their inquiries.
+         094 \par  & HOLME-\par Settig Page- \par 1:1 Inquiry& Users should be able to reach out to HOLME through the '1:1 Inquiry' section, and they should also have the option to attach photos when submitting their inquiries. The title should be limited to 50 characters, and the content should not exceed 950 characters. Additionally, the size of attached files should be within 10MB.
          \\ \hline
     \end{tabular}
 \end{table}
 \begin{figure}[h]
 \centering                                         
-\includegraphics[width=0.8\columnwidth]{img/Specific/095.png}
+\includegraphics[width=0.7\columnwidth]{img/Specific/095.png}
 \caption{ID:095 HOLME-Setting-Terms of Service}
 \end{figure}
 \begin{table}[h]
@@ -1749,107 +1752,18 @@ If connected IoT services exist, users should be able to import device lists or 
          \\ \hline
     \end{tabular}
 \end{table}
-
-\vspace{1cm}
-\subsection{Non-Functional Requirements}
-\item[1] Network Requirements
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-         099 \par  & HOLME-\par Network-\par User Account \par and Authorization  \par Management &Users should create accounts to upload and download configuration data to the cloud. Proper user account management, including role and permission control, is essential.\\ \hline
-         100 \par  & HOLME-\par Network-\par Secure \par Communication  & IoT device configuration data must be transmitted to the cloud in an encrypted state. Secure communication protocols like HTTPS and TLS should be employed to ensure data security.  \\ \hline
-    \end{tabular}
-\end{table}
-\vspace{3cm}
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-        101 \par  & HOLME-\par Network-\par Cross-Platform \par Compatibility & The application should work on various platforms (iOS, Android) and support communication via mobile networks and Wi-Fi.\\ \hline
-         102 \par  & HOLME-\par Network-\par Data \par Synchronization & Adequate synchronization mechanisms must be implemented when uploading and downloading IoT device configuration data to/from the cloud. This ensures that data remains consistent across devices.\\ \hline
-         103 \par  & HOLME-\par Network-\par Low Bandwidth \par Adaptation  & Considering users may have limited network bandwidth, the application may require data compression and optimization to minimize bandwidth usage.\\ \hline
-         104 \par  & HOLME-\par Network-\par Error Handling \par and Logging  & The application should handle network errors and exceptions properly. It must log error messages and debugging information to assist in problem identification and resolution.\\ \hline
-    \end{tabular}
-\end{table}
-
-\vspace{3cm}
-\item[2] Security requirements
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-        105 \par  & HOLME-\par Security-\par Data \par Protection & User and device configuration information should be encrypted using appropriate data protection mechanisms. Secure communication protocols such as TLS/SSL should be used to protect data during transit.\\ \hline
-         106 \par  & HOLME-\par Security-\par Authorization & The system should implement an authorization management system to control user and administrator permissions. Access permissions to data and settings should be controlled based on user roles.\\ \hline
-         107 \par  & HOLME-\par Security-\par Authentication  & Users and administrators should log in using secure and strong authentication methods. Support for additional security authentication methods like Two-Factor Authentication (2FA) is important. \\ \hline
-         108 \par  & HOLME-\par Security-\par Security \par Updates  & The system and application should receive regular security updates and patches. Security vulnerabilities should be promptly addressed and mitigated.\\ \hline
-         109 \par  & HOLME-\par Security-\par Logging and \par  Auditing  &The system should generate and store log records, including significant security events and user activities. It should provide auditing and analysis capabilities for monitoring and responding to security incidents. \\ \hline
-    \end{tabular}
-\end{table}
-\clearpage
-
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-        110 \par  & HOLME-\par Security-\par Physical \par Security  &Physical security measures should be implemented to protect cloud data centers and servers. Measures to restrict physical intrusion and equipment access are necessary. \\ \hline
-        111 \par  & HOLME-\par Security-\par Disaster \par Recovery & Disaster recovery plans need to be in place in case of data loss or system failure. Regular testing and maintenance of recovery strategies are essential. \\ \hline
-        112 \par  & HOLME-\par Security-\par Security \par Education and \par Awareness & Security education and awareness programs should be provided to users and administrators. \\ \hline
-        113 \par  & HOLME-\par Security-\par Access \par Control & Strict access controls should be in place for users to access and modify device settings and data. \\ \hline
-         114 \par  & HOLME-\par Security-\par External \par Threat Response & Measures and actions for responding to malicious attacks, intrusion attempts, and other external threats should be established. \\ \hline
-    \end{tabular}
-\end{table}
-
-\item[3] Performance requirements
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-        115 \par  & HOLME-\par Performance-\par Response \par Time  &The application must retrieve device configuration data from the cloud quickly.  \\ \hline
-        116 \par  & HOLME-\par Performance-\par Scalability & The application should be able to manage hundreds, thousands, or even tens of thousands of IoT device configurations. It must support scalability to handle an increasing number of users and IoT devices without compromising performance. \\ \hline
-        117 \par  & HOLME-\par Performance-\par Network \par Bandwidth & Efficiently utilize bandwidth when downloading settings from the cloud to provide fast download speeds. Include features for bandwidth minimization and data compression. \\ \hline
-        118 \par  & HOLME-\par Performance-\par Local Caching & Cache downloaded device configurations locally to prevent users from re-downloading the same settings. Manage the validity period of cached data and update it as needed. \\ \hline
-         119 \par  & HOLME-\par Performance-\par Error Handling & Proper error handling should be in place for errors that may occur during downloads. Provide error messages and debugging information to assist users in troubleshooting issues. \\ \hline
-    \end{tabular}
-\end{table}
-\vspace{3cm}
-
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-        120 \par  & HOLME-\par Performance-\par Concurrency &The application should handle multiple users and numerous IoT device configuration requests simultaneously. Manage concurrency to support parallel processing while maintaining response times.  \\ \hline
-        121\par  & HOLME-\par Performance-\par Performance \par Testing & Conduct performance testing to validate response time, bandwidth usage, and scalability. Identify and optimize bottlenecks for performance improvement. \\ \hline
-        122 \par  & HOLME-\par Performance-\par Logging and \par   Monitoring & Provide logging and monitoring features to record events and monitor system performance. Enable data collection and analysis for tracking the system's status and performance. \\ \hline
-    \end{tabular}
-\end{table}
-\vspace{1cm}
-
-\item[4] Management and maintenance requirements
-\begin{table}[h]
-\def\arraystretch{1.2} \small
-    \begin{tabular}{|p{1cm}|p{1.8cm}|p{5.0cm}|}
-        \hline
-        ID & Name & Description\\ \hline
-        123 \par  & HOLME-\par Management \par and \par maintenance-\par Reliability and \par Availability& Ensure stable management and storage of customers' IoT device configurations. Establish backup and recovery strategies to guarantee service availability.
-  \\ \hline
-        124\par  & HOLME-\par Management \par and \par maintenance- \par Data Backup \par and Recovery & Regularly back up IoT device configuration data. Provide data recovery capabilities in case of data loss. \\ \hline
-        125 \par  & HOLME-\par Management \par and \par maintenance- \par Scalability & Ensure the application operates stably as the number of users and IoT devices increases. Support resource and server scaling for efficient resource utilization. \\ \hline
-        126 \par  & HOLME-\par Management \par and \par maintenance- \par Update \par Management& Regularly receive and manage updates, including security patches and new feature additions. Ensure seamless update management. \\ \hline
-        127 \par  & HOLME-\par Management \par and \par maintenance- \par Data Integrity & Maintain data integrity for IoT device configuration data stored in the cloud. Implement mechanisms to prevent data alteration or corruption. \\ \hline
-        128 \par  & HOLME-\par Management \par and \par maintenance- \par Logging and \par Monitoring & The application should record events and logs for monitoring system health and performance. Provide tools and dashboards for monitoring system status and performance. \\ \hline
-    \end{tabular}
-\end{table}
-\clearpage
-
-
 \end{enumerate}
+
+
+\section{ARCHITECTURE DESIGN}
+\subsection{Overall Architecture}
+
+\begin{figure}[h]
+\centering   
+\includegraphics[width=0.8\columnwidth]{img/architecture/overall.png}
+\caption{Overall Architecture}
+\end{figure}
+
 \clearpage
 
 
@@ -1863,6 +1777,7 @@ If connected IoT services exist, users should be able to import device lists or 
 \bibitem{SpringBoot}  “SpringBoot,” https://spring.io/projects/spring-boot, 2023.
 \bibitem{Hivernate}  “Hivernate,” https://hibernate.org/, 2023.
 \bibitem{gRPC}  “gRPC,” https://grpc.io/, 2023.
+\bibitem{Flask}  “Flask,” https://flask.palletsprojects.com/en/3.0.x/ 2023.
 \bibitem{LightBulb} CSA. "Matter Device Library Specification." CSA, 2023, 27~28 pages
 \bibitem{Refrigerator} CSA. "Matter Device Library Specification." CSA, 2023, 69~72 pages
 \bibitem{WaterDispensor} CSA. "Matter Device Library Specification." CSA, 2023, 69~72 pages
