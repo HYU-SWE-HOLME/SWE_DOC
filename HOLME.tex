@@ -1760,15 +1760,396 @@ If connected IoT services exist, users should be able to import device lists or 
 
 \begin{figure}[h]
 \centering   
-\includegraphics[width=0.8\columnwidth]{img/architecture/overall.png}
+\includegraphics[width=0.7\columnwidth]{img/architecture/overall.png}
 \caption{Overall Architecture}
 \end{figure}
+\vspace{1cm}
+HOLME users should be able to interact with HOLME's backend using either the frontend or NUGU. To achieve this, we have three modules: Frontend, NUGU Playbuilder, and Backend.
+
+The first module is the Frontend. We designed the HOLME application using React Native to enable users to directly interact with the app. Users can recognize QR codes on the main page, manipulate devices/routines, and customize various settings according to their preferences.
+
+The second module is the Backend. We utilized Spring Boot to build the application server, with Hibernate serving as the connected database. The backend performs tasks requested by users. Our application includes functions such as user registration/login, space configuration, QR code recognition, device control, and routine execution. The database contains tables for instance configuration, users, and reports. When information is received from users, the server stores it in the database.
+
+The third module is "NUGU Playbuilder." This service, provided by SKT, allows developers to create services interacting with NUGU. NUGU plays a role in enabling users to use HOLME through voice commands. Users can manipulate HOLME's main features through NUGU. To facilitate communication between NUGU Playbuilder and the backend, we added a gateway structure built with Flask.\\
+
+\subsection{Directory Organization}
+\begin{figure}[h]
+\centering   
+\includegraphics[width=1\columnwidth]{img/architecture/DO.png}
+\caption{Overall Architecture}
+\end{figure}
+
+HOLME consists of five GitHub repositories: FE\_APP, BE\_SERV, MATTER\_INS, NUGU, and DOC.\\
+The FE\_APP repository is used for developing the frontend application of the HOLME project. This repository contains code and files responsible for implementing the overall design and functionality required for users to interact with the HOLME application. The primary focus is on enhancing HOLME's user interface and user experience.\\
+The BE\_SERV repository is utilized for implementing the backend services of the HOLME project. It contains code and files needed to handle various tasks requested by users of the HOLME application. The server-side logic responsible for HOLME's core functionalities is primarily implemented in this repository.\\
+The MATTER\_INS repository contains code for virtual instances that simulate the role of actual MATTER devices in the HOLME project.
+The NUGU repository includes code for integrating and utilizing NUGU in the HOLME project.\\
+The DOC repository is dedicated to documenting the project and includes Latex code and PDF files for this purpose.
+
+\begin{table}[h]
+\caption{Directory Organiztion-Frontend-1}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_FE\_APP/src/api/ping & sendPingRequest.ts  \par types.d.ts \\ \hline
+          HOLME\_FE\_APP/src/api/synk & sendSyncRequest.ts \par types.d.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/BreifingBoard &  BrifingBoard.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/BreifingBoard/api &  fetchAllReport.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/BreifingBoard/types &  types.d.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Loading &  LoadingScreen.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Loading/logic &  navigateToScreen.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Login/api & sendLoginRequest.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Login/logic & LoginLogics.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Login/types & types.d.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Login/ui & LoginScreen.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Login/ui/assets & string.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Login/ui/components & accountUtilsComponent.tsx\par languageButton.tsx \par loginButtonComponent.tsx \par loginFormComponent.tsx\par snsLoginButtonComponent.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage & MainScreen.tsx \par QRCodeScanner \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/api & fetchSettingData.ts \par sendPingRequest.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/assets & line.png \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/components/buttons & adddeviceButton.tsx \par roomSettingButton.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/components/modals & BottomSheet.tsx \par modalcontent.tsx \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Directory Organiztion-Frontend-2}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/logic & syncLogic.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/menubar & menubar.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/Mainpage/types & types.d.ts\\ \hline
+          HOLME\_FE\_APP/src/screen\par/WelcomeScreen/types & types.d.ts \\ \hline
+          HOLME\_FE\_APP/src/screen\par/welcomeScreen/ui &  WelcomeScreen.tsx \\ \hline
+          HOLME\_FE\_APP/src/screen\par/welcomeScreen/ui/components &  Layer.tsx \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Directory Organiztion-Backend-1}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app & BeAppApplication.kt \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/entity & instances.kt \par MultipleRequrets.kt \par ServiceRequest.kt \par SingleRequest.kt \par MultipleResponses.kt \par MultipleResponseService.kt \par ServiceResponse.kt \par SingleRespones.kt \par SingleResponseService.kt\\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/ping& PingController.kt\par PingRequest.kt \par PingResponse.kt \par instanceMapManage.kt \par PingService.kt \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/report & ReportController.kt\par ReportRequest.kt \par ReportResponse.kt \par OpenAIService.kt \par ReportService.kt \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/setting/download & DownloadContoller.kt \par DownloadRequest.kt \par DownloadResponse.kt \par DownloadService.kt \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/setting/upload & UploadContoller.kt \par UploadRequest.kt \par UploadResponse.kt \par UploadService.kt \par \_REST\_TEST\_DATA.json\\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/singin & SigninContoller.kt \par SigninRequest.kt \par SigninResponse.kt \par Signinervice.kt\\ \hline
+	\end{tabular}
+\end{table}
 
 \clearpage
 
 
+\begin{table}[h]
+\caption{Directory Organiztion-Backend-2}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/singup & SignUpContoller.kt \par SignUpRequest.kt \par SignUpResponse.kt \par SignUpService.kt\\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/api/sync & SyncContoller.kt \par SyncRequest.kt \par SyncResponse.kt \par SyncType.kt \par SyncInstanceTypeFactory.kt \par SubroutineManager.kt \par SyncRequestService.kt \par sendReportService.kt \par sync\_test\_data.json \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/utils & HashFunction.kt \\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/repository & ReportRepository.kt\par ServiceUserRepository.kt \par SettingRepository.kt\\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/entity & ServiceUser.kt\par InstanceSetting.kt \par Report.kt\\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/dto & ServiceUserDto.kt\par SafeServiceUserDto.kt \par InstanceSettingDto.kt\par ReportDto.kt\\ \hline
+          HOLME\_BE\_SERVER/src\par/main/kotlin/com/holme/be\_app\par/config & WebAppConfig.kt\par GPTConfig.kt\\ \hline
+	\end{tabular}
+\end{table}
 
+\begin{table}[h]
+\caption{Directory Organiztion-MATTER\_INS-1}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AIRCON & airconTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AIRCON/src/core & frameHandle.go\par aircon.pb.go\par aircon.proto\par aircon\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AIRCON/src/features& aircon.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AIRCON/src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AIRCON/src/terminal& output.go\\ \hline
+	\end{tabular}
+\end{table}
 
+\begin{table}[h]
+\caption{Directory Organiztion-MATTER\_INS-2}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AISPEAKER & aiSpeakerTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AISPEAKER/src/core & frameHandle.go\par aispeaker.pb.go\par aispeaker.proto\par aispeaker\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AISPEAKER/src/features& aispeaker.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AISPEAKER/src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_AISPEAKER/src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_CURTAIN & curtainTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_CURTAIN/src/core & frameHandle.go\par curtain.pb.go\par curtain.proto\par curtain\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_CURTAIN/src/features& curtain.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_CURTAIN/src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_CURTAIN/src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_LIGHTBULB & lightbulbTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_LIGHTBULB/src/core & frameHandle.go\par lightbulb.pb.go\par lightbulb.proto\par lightbulb\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_LIGHTBULB/src/features& lightbulb.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_LIGHTBULB/src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_LIGHTBULB/src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_MASSAGECHAIR & massagechairTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_MASSAGECHAIR\par /src/core & frameHandle.go\par massagechair.pb.go\par massagechair.proto\par massagechair\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+	\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[h]
+\caption{Directory Organiztion-MATTER\_INS-3}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_MATTER\_INS\par/INS\_MASSAGECHAIR\par /src/features& massagechair.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_MASSAGECHAIR\par /src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_MASSAGECHAIR\par /src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_REFRIGERATOR & refrigeratorTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_REFRIGERATOR\par /src/core & frameHandle.go\par refrigerator.pb.go\par refrigerator.proto\par refrigerator\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_REFRIGERATOR\par /src/features& refrigerator.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_REFRIGERATOR\par /src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_REFRIGERATOR\par /src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_SOUNDBAR & soundbarTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_SOUNDBAR/src/core & frameHandle.go\par soundbar.pb.go\par soundbar.proto\par soundbar\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_SOUNDBAR/src/features& soundbar.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_SOUNDBAR/src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_SOUNDBAR/src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_TELEVISION & televisionTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_TELEVISION/src/core & frameHandle.go\par television.pb.go\par television.proto\par television\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_TELEVISION\par /src/features& television.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_TELEVISION\par /src/raw& on.txt\\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Directory Organiztion-MATTER\_INS-4}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_MATTER\_INS\par/INS\_TELEVISION\par /src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_WaterDispensor & waterDispensorTestData.json\par go.mod\par go.sum\par main.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_WaterDispensor\par /src/core & frameHandle.go\par waterDispensor.pb.go\par waterDispensor.proto\par waterDispensor\_grpc.pb.go\par init.sh\par instance\_core.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_WaterDispensor\par /src/features& waterDispensor.go\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_WaterDispensor\par /src/raw& on.txt\\ \hline
+          HOLME\_MATTER\_INS\par/INS\_WaterDispensor\par /src/terminal& output.go\\ \hline
+          HOLME\_MATTER\_INS\par/HIVEMIND & go.mod \par go.sum\par main.go\par run\_hivemind.sh\\ \hline
+          HOLME\_MATTER\_INS\par/HIVEMIND/core & ip.go\par RESTHandler.go\par hivemind\_core.go\par intanceHandler.go\par intances.go\par logger.go \par types.go\par init.sh \par merged\_pb.go\par merged.proto\par merged\_grpc.pb.go\\ \hline
+          HOLME\_MATTER\_INS\par/HIVEMIND/intances & types.go\\ \hline
+          HOLME\_MATTER\_INS\par/HIVEMIND/utils & utils.go\\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Directory Organiztion-NUGU}
+\def\arraystretch{1.24} \small
+    \begin{tabular}{|p{3.9cm}|p{3.9cm}|}
+        \hline
+        Directory & File Name \\ \hline
+          HOLME\_NUGU & server.py\par testBackend.py\par printRecievedData.py\\ \hline
+	\end{tabular}
+\end{table}
+\clearpage
+
+\subsection{Module 1: Frontend}
+\begin{enumerate}
+    \item Purpose\\
+    To develop HOLME, we utilized React Native. The frontend plays a crucial role in providing an interface to the user. By offering input fields for users to enter information, it establishes a connection between the user and the server. Once this task is completed, the values are transmitted to the backend. Additionally, the frontend retrieves data from the database, transforms it into a format understandable to the user, and then presents it to the user.\\ \\
+    \item Functionality\\
+Users can create an account by entering their email, password, and ID, or by using social accounts such as KakaoTalk or Google. Additionally, they have the option to add devices through QR code recognition, operate devices, execute routines, and read reports. The frontend communicates with the backend by sending requests to display information obtained from the database.\\ \\
+    \item Location of source code:\\ https://github.com/PROJECT-HOLME/HOLME\_FE\_APP \\ \\
+    \item Class component
+        \item[-] api folder : This is a folder containing files for sending ping and sync requests.\\
+        \item[-] deepLinkingConfig.ts : This is a file that configurates links of screens.\\
+        \item[-] appNavigation.tsx : This is a file that creates native stack navigator, defines root stack screens for navigating screens.\\
+        \item[-] screen folder: This is a folder containing files for screens and their components.\\
+        \item[-] images.d.ts : This is a file that, declares modules of image files. \\
+        \item[-] navigator.d.ts : This is a file that contains navigator parameter list.\\
+        \item[-] props.d.ts : This file that defines screen props used for navigation between screens.\\
+        \item[-] sendPingRequest.ts:: This is a file for ping request process.\\
+        \item[-] types.d.ts : This is a file that defines variables needed in ping request process.\\
+        \item[-] sendSyncRequest.ts : This is a file for synchronization with backend server.\\
+        \item[-] types.d.ts : This is a file that defines variables needed in synchronization process.\\
+        \item[-] fetchAllReport.ts : This is a file that receives the message from backend server.\\
+        \item[-] types.d.ts  : This is a file that defines variables needed in BriefingBoard.  \\
+        \item[-] BriefingBoard.tsx : This file is a typescript file showing the briefing board page in HOLME\\
+        \item[-] natigateToScreen.ts : This file shows alert after configuration migration is finished.\\
+        \item[-] LoadingScreen.tsx : This is typescript file for showing the loading page needed when the configuration migration process is running.\\
+        \item[-] sendLoginRequest.ts  : This file defines status variables needed in login function.\\
+        \item[-] LoginLogics.ts  : This is a file that contains variable needed for login function.\\
+        \item[-] types.d.ts  : This contains definition of parameters needed in login function.\\
+        \item[-] string.ts : This contains text for login system.\\
+        \item[-] components folder : This is a folder which contains multiple typescript files for components in LoginScreen. \\
+        \item[-] LoginScreen.tsx: This is typescript file for showing the login page in HOLME.\\
+        \item[-] fetchSettingData.ts : This is a file that defines status variables needed in configuration migration function.\\
+        \item[-] sendPingRequest.ts : This is a file file for ping request process.\\
+        \item[-] buttons folder : This is a folder that contains buttons used in MainScreen.\\
+        \item[-] devices folder : This is a folder that contains device components used in MainScreen.\\
+        \item[-] modals folder : This is a folder that contains components for modal contents used in MainScreen.\\
+        \item[-] routines folder : This is a folder that contains routine components used in MainScreen.\\
+        \item[-] syncLogic.ts : This is a file that defines logic of synchronization process.\\
+        \item[-] menubar folder : This is a folder that contains components for menubar used in HOLME screens.\\
+        \item[-] types.d.ts: This is a file that defines variables needed in MainScreen.\\
+        \item[-] MainScreen.tsx : This is typescript file for main screen of HOLME.\\
+        \item[-] QRcodeScanner.tsx : This is a  typescript file for QR code scanner using backside camera.\\
+        \item[-] types.d.ts : This is the contains layer parameters for welcome screen.\\
+        \item[-] assets folder : This is a folder that contains image files used in welcome screen.\\
+        \item[-] Layer.tsx : This is a typescript file defining the layer used in welcome screen. \\
+        \item[-] WelcomeScreen.tsx: This is typescript file for welcome screen of HOLME.\\
+\end{enumerate}
+\vspace{10cm}
+
+\subsection{Module 2: Backend}
+\begin{enumerate}
+    \item Purpose\\
+    The backend is responsible for managing servers and databases. It stores and manages data and processes actions taken by users on the client side of the application. The backend stores data generated as a result of user actions in the frontend's database and fulfills the role of retrieving data needed by the user from the frontend's database. To implement HOLME's backend, we used Spring and Flask. For the database, we employed Hibernate, known for its high compatibility with Spring Boot. Utilizing Hibernate, we stored user information necessary for the application's usage, thus constructing the backend server.\\ \\
+    \item Functionality\\
+HOLME's server is responsible for executing tasks requested by users through the frontend or NUGU and storing corresponding values in the database. When users load or save their settings, this information is stored in the database. Additionally, after actions such as device manipulation, routine execution, and device connections, HOLME provides overall services, including generating reports.\\\\
+    \item Location of source code:\\ https://github.com/PROJECT-HOLME/HOLME\_BE\_SERV \\ \\
+    \item Class component
+        \item[-] BeAppApplication.kt : This is a file for Spring Boot Application entrypoint.\\
+        \item[-] api/entity : This is a folder that contains entities used for api service.\\
+        \item[-] api/entity/instance/Instances.kt : This ia a file for Entity Definition for Instance (Used for MATTER communication with
+GoLang IOT Instances.)
+\\
+        \item [-] api/request : This is a folder for Entities used for request of each endpoints.\\
+        \item [-] ServiceRequest.kt : This is a file for Interface for service request.\\
+        \item [-]SingleRequest.kt : This is Class used for single service request.\\
+        \item[-] MultipleRequests.kt  : This is a f Class used for multiple service request.\\
+        \item [-] api/response : This is a folder for Entities used for response of each endpoints\\
+        \item [-] ServiceResponse.kt : This is a file for Interface for service response.\\
+        \item [-] SingleResponse.kt , SingleResponseService.kt  : These are Class and Service used for single service
+response.\\
+        \item [-]MultipleResponses.kt , MultipleResonseService.kt  : These are Class and Service used for multiple service
+response.\\
+        \item[-] api/ping : This is a folder that contains service to check whether the IOT instance exists in targeting
+place.\\
+        \item [-] PingController.kt : : This is Controller for ping service.\\
+        \item [-] PingRequest.kt, PingResonse.kt : These are Request/Response class definition for Ping Service.\\
+        \item [-] InstaneMapManager.kt :  Manager class for ping response. It handles the IOT instance doesn't exists.\\
+        \item [-] api/report : This is Report service directory; contains service for report regarding setting substitution and
+upgrades. \\
+        \item [-] ReportController.kt : This is a  Controller for report service.\\
+        \item [-] ReportRequest.kt, ReportResonse.kt  : These are Request/Response class definition for Report Service\\
+        \item [-] ReportService.kt :  Report service class. Contains business logic for report service.\\
+        \item [-] OpenAIService : Report service class using Open AI. Contains business logic for report
+service using Chat GPT.\\
+        \item [-] api/setting : This is a Setting service directory; it will be divided into uploading service and downloading service.\\
+        \item [-] setting/upload : This is a Setting upload service directory; contains service to upload IOT instance setting to database.\\
+        \item [-] UploadController.kt : This is a Controller for upload service.\\
+        \item [-] UploadRequest.kt, UploadResonse.kt : These are Request/Response class definition for Setting Upload Service.\\
+        \item [-] UploadService.kt : This is Setting upload service class. Contains business logic for setting upload service.\\
+        \item [-] REST\_TEST\_DATA.json : This is a file contains test data for testing setting uploads.\\
+        \item [-] setting/download : This is Setting download service directory; contains service to download IOT instance setting to
+database.\\
+        \item [-] DownloadController.kt : This is a controller for download service.\\
+        \item [-] DownloadRequest.kt, DownloadResonse.kt : These are Request/Response class definition for Setting download service.\\
+        \item [-] DownloadService.kt : This is Setting download service class. Contains business logic for setting download service.\\
+        \item [-] api/signin : Sign in service directory; contains service for signing in.\\
+        \item [-] SignInController.kt : This is a Controller for sing in service.\\
+        \item [-] SignInRequest.kt, SignInResonse.kt : : These are Request/Response class definition for Sign in service.\\
+        \item [-] SignInService.kt : This is sign in service class. Contains business logic for sign in service.
+        \item [-] api/signup : This is a Sign up service directory; contains service for signing in.\\
+        \item [-] SignUpController.kt : This is a Controller for sing up service.\\
+        \item [-] SignUpRequest.kt, SignUpResonse.kt : These are Request/Response class definition for Sign up service.\\
+        \item [-] SignUpService.kt : Sign up service class. Contains business logic for sign up service.\\
+        \item [-] api/sync : This is Setting synchronization service directory; contains service to synchronize and apply IOT
+instance settings to targeting place.\\
+        \item [-] SyncController.kt: This is a  Controller for synchronization service.\\
+        \item [-] SyncRequest.kt, SyncResonse.kt : These are Request/Response class definition for sync Service.\\
+        \item [-] SyncInstanceTypeFactory.kt : This return a class for instance. Used a factory pattern to do such task.\\
+        \item [-] SubroutineManager.kt : This is Manager class for sub-routines; apply subroutines based on the ping result.\\
+        \item [-] SyncRequestService.kt : This is a Synchronization service class. Contains business logic for synchronization service.\\
+        \item [-] sync\_test\_data.json  : This contains test data for testing setting synchronization.\\
+        \item [-] HashFunction.kt : This apply SHA Hash for secret value. Used for universal encryption in backend service.\\
+        \item [-] ServiceUserRepository.kt : This is Database repository for ServiceUser table.\\
+        \item [-] SettingReposiory.kt : This is Database repository for InstanceSetting table.\\
+        \item [-] ReportRepository.kt : This is Database repository for Report table.\\
+        \item [-] ServiceUser.kt : This is a Database entity for ServiceUser table.\\
+        \item [-] InstanceSetting.kt : This is Database entity for InstanceSetting table.\\
+        \item [-] Report.kt : This is  Database entity for Report table. \\
+        \item [-] ServiceUserDto.kt : This is a Dto class for ServiceUser entity.\\
+        \item [-] SafeServiceUserDto.kt : This is a  Safe dto class for ServiceUser entity. (Dto class that doesn't contains
+password and user secret information.)\\
+        \item [-] InstanceSettingDto.kt : This is a Dto class for InstanceSetting entity.\\
+        \item [-] ReportDto.kt : This is a Dto class for Report entity.\\
+        \item [-] WebAppConfig : This set backend configuration required to be applied. (e.g. CORS configuration)\
+        \item [-] GPTConfig : This set OpenAI configuration required for using Chat GPT.\\
+\end{enumerate}
+
+\vspace{4cm}
+\subsection{Module 3: Instances}
+\begin{enumerate}
+    \item Purpose\\
+    The instances are divided into two parts: the instance part that creates virtual IoT devices, and the logical hub part that can serve as a hub role even without a Matter hub.\\
+Firstly, we encountered challenges progressing the project due to the absence of devices that actually support the MATTER protocol. As a solution, we generated virtual IoT devices. These virtual IoT devices were instantiated to simulate the functionalities required for the project.\\
+Secondly, the logical hub, capable of assuming the role of a hub even in the absence of a Matter hub, is a crucial component of our project.\\ \\
+    \item Functionality\\
+    The first part, virtual IoT devices, operates like real IoT devices through the HOLME application or NUGU. The second part, the logical hub, can perform the role of a hub even without a Matter hub. \\ \\
+    \item Class component\\
+    Describing an example of an air conditioner within the instances. The file structure for the remaining instances is also identical.\\
+        \item[-] airconTestData.json : This is a Test file created for JSON-formatted data coming from the backend for testing purposes.\\
+        \item[-]  go.mod : This is a File for managing dependencies in GoLang. All modules used in GoLang are maintained in the go.mod file.\\
+        \item[-] go.sum : This file lists down the checksum of direct and indirect dependency required along with the version. It is to be mentioned that the go.mod file is enough for a successful build. They why go.sum file is needed?. The checksum present in go.sum file is used to validate the checksum of each of direct and indirect dependency to confirm that none of them has been modified. \\
+        \item[-] main.go: This is a file containing the main function within the package main. For a web server (an executable), a package main with a main() function is necessary.\\
+        \item[-] /src : This is a directory where functions, structures, and other elements required for the main function are defined. \\
+        \item[-] /src/core : Handling the frame of the air conditioner instance / The format of data exchanged with the backend server / Defining how the instance will behave when initiated and started, a core section of the instance.\\
+        \item[-] /src/core/handler : This is a Directory containing the frameHandler.\\
+        \item[-] frameHandler.go: This is a file defining how the air conditioner instance will handle a frame received from the backend server.\\
+        \item[-] instance\_core.go : This is a file defining the actions to be taken when the air conditioner instance is initiated or started.\\
+        \item[-] /src/core/pbs : This is a directory containing files that define the format of data exchanged with the backend server using gRPC and redefined in the form of GoLang.\\
+        \item[-] aircon.pb.go : The output obtained by compiling the aircon.proto file using the Protocol Buffer compiler. Here, the structures and functions defined in aircon.proto are redefined in the gRPC format.\\
+        \item[-] aircon.proto : This is a file necessary for using gRPC. The format of messages exchanged with the backend server is defined here.\\
+        \item[-] aircon\_grpc.pb.go  : The output obtained by compiling aircon.proto using the Protocol Buffer compiler. It includes a server/client interface with basic I/O functions. \\
+        \item[-] init.sh : The shell script containing commands to compile aircon.proto and generate aircon.pb.go and aircon\_grpc.pb.go.\\
+        \item[-] /src/feature : This is a directory containing definitions for functionalities that the air conditioner instance can perform, such as power on/off.\\
+        \item[-] aircon.go : This is a file containing definitions for functionalities that the air conditioner instance can perform, such as power on/off.\\
+        \item[-] /src/raw  : This is a directory containing ASCII art necessary for visualizing the air conditioner instance in the terminal.\\
+        \item[-] on.txt: ASCII art of the airconditioner on. \\
+        \item[-] /src/terminal : This is a directory defining the method to print an air conditioner instance in the terminal.\\
+        \item[-]  output.go : This is a file defining the method to print an air conditioner instance in the terminal.\\
+        \item[-] go.mod: [][][][][]][][][][][][][][][][][][][][][][][][] \\
+        \item[-] go.sum: This is typescript file for showing the login page in HOLME.\\
+        \item[-] main.go : This is a file that defines status variables needed in configuration migration function.\\
+        \item[-] run\_hivemind.sh : This is a file file for ping request process.\\
+        \item[-] ip.go : This is a folder that contains buttons used in MainScreen.\\
+        \item[-] RESTHandler.go : This is a folder that contains device components used in MainScreen.\\
+        \item[-] hivemind\_core.go : This is a folder that contains components for modal contents used in MainScreen.\\
+        \item[-] instanceHandler.go : This is a folder that contains routine components used in MainScreen.\\
+        \item[-] instanceRequestHandler.go : This is a file that defines logic of synchronization process.\\
+        \item[-] intances.go : This is a folder that contains components for menubar used in HOLME screens.\\
+        \item[-] logger.go: This is a file that defines variables needed in MainScreen.\\
+        \item[-] types.go : This is typescript file for main screen of HOLME.\\
+        \item[-] init.sh : This is a  typescript file for QR code scanner using backside camera.\\
+        \item[-] merged.pb.go : This is the contains layer parameters for welcome screen.\\
+        \item[-] merged.proto: This is a folder that contains image files used in welcome screen.\\
+        \item[-] merged\_grpc.pb.go : This is a typescript file defining the layer used in welcome screen. \\
+        \item[-] utils.go: This is typescript file for welcome screen of HOLME.\\
+\end{enumerate}
+\clearpage
+
+\subsection{Module 4: NUGU}
+\begin{enumerate}
+    \item Purpose\\
+    This module is created to enable users to communicate with HOLME's backend using NUGU AI SPEAKER instead of the frontend\\
+    \item Functionality\\
+    By communicating with HOLME's backend through NUGU AI SPEAKER, users can execute key functionalities of HOLME, such as device control and routine execution. \\
+    \item Class component
+        \item[-] server.py : This is a server that is connected to NUGU Play and is responsible for transmitting necessary information to NUGU Play or forwarding commands from NUGU Play to the backend server. It converts requests received from NUGU Play into well-structured JSON format and sends them to the backend server.\\
+        \item[-] testBackend.py : This is a test server that will function as the backend server connected to server.py.\\
+        \item[-] printReceivedData.py : This is a test file for testBackend.py that simply prints the received data as is.\\
+\end{enumerate}
+
+\clearpage
 \begin{thebibliography}{9}
 \bibitem{Typescript}  “Typescript,” https://www.typescriptlang.org/, 2023.
 \bibitem{Kotlin}  “Kotlin,” https://kotlinlang.org/, 2023.
