@@ -2386,10 +2386,25 @@ Users can change the language of the HOLME application by clicking on the `Langu
 \end{figure}
 \subsubsection{Logout}
 Users can log out of the HOLME application by clicking on the `Logout' button under `My HOLME.'
-
 \clearpage
 
-\clearpage
+\section{DISCUSSION}
+\subsection{Technical Difficulties}
+The first technical issue arose from the generation time of generative AI. The original plan was to use the generative AI, ChatGPT, to write all parts of the report when we wanted to create a report. However, when attempting to use both ChatGPT and the AI speaker simultaneously, we found that it didn't work as expected. We used NUGU Playbuilder to incorporate the NUGU AI speaker, and the maximum wait time for a response from the backend proxy in this Playbuilder was shorter than the time required for ChatGPT to generate the report. Unfortunately, this led to the inability to integrate generative AI into all parts of the report service, and we had to incorporate generative AI only in the parts where the AI speaker was not used. We created the report by obtaining results and outputting them in a specific format in the sections where the AI speaker was used.
+
+The second technical issue occurred with the AI speaker. We wanted to create a service where the speaker initiates interaction, for example, with reminder notifications, without the user having to speak to the speaker first. However, in the NUGU Playbuilder we used, there was no way to make the AI speaker initiate the conversation first. Consequently, we had to develop scenarios that are triggered by specific requests.\\
+
+\subsection{Non-Technical Difficulties}
+On a non-technical aspect, the most significant challenge we faced was interpersonal conflicts, particularly in the form of differing opinions. Throughout the project, conflicts arose due to divergent perspectives on the project's direction, variations in team members' personalities, and differences in communication styles. In order to address these issues, we decided to increase the frequency of communication. This decision stemmed from the realization that a substantial portion of conflicts originated from a lack of effective communication.
+
+By fostering more frequent communication based on mutual respect and understanding among team members, we were able to navigate and resolve internal conflicts within the team. This approach also served to strengthen relationships among team members and enhance overall collaboration. Consequently, we were able to smoothly advance the project and effectively cooperate until its successful completion.\\
+
+\subsection{Conclusion}
+
+While everything hasn't come together exactly as initially envisioned, we've put our best efforts into creating HOLME. Despite its current focus on connecting users' homes and accommodations like hotels, HOLME's core concept revolves around the `convenient migration of user configurations,' which we believe can be applicable to various settings.
+
+Looking ahead to a future where the proliferation of IoT devices becomes commonplace, we anticipate that the scope of smart homes will expand to include shared offices and even individuals' cars. Therefore, we envision HOLME playing a significant role in this burgeoning smart home industry. We believe HOLME has ample potential to make a substantial impact, and we take pride in the results we've achieved so far. \\
+
 \begin{thebibliography}{9}
 \bibitem{Typescript}  “Typescript,” https://www.typescriptlang.org/, 2023.
 \bibitem{Kotlin}  “Kotlin,” https://kotlinlang.org/, 2023.
@@ -2408,5 +2423,4 @@ Users can log out of the HOLME application by clicking on the `Logout' button un
 \bibitem{Blind} CSA. "Matter Device Library Specification." CSA, 2023, 66~68 pages
 
 \end{thebibliography}
-
 \end{document}
